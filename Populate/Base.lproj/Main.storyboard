@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="wIX-A7-2yr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="wIX-A7-2yr">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
@@ -9,71 +9,106 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ACPopulateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tcj-rb-yUf"/>
+                        <viewControllerLayoutGuide type="bottom" id="5sh-mt-uAf"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fZS-TI-Soh">
-                                <rect key="frame" x="79" y="291" width="162" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZS-TI-Soh">
+                                <rect key="frame" x="120" y="242" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Populate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="populate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="vUa-qr-qfH"/>
+                                    <action selector="populateButtonDidTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AbK-Iz-8CQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="200" borderStyle="roundedRect" minimumFontSize="17" id="hAK-Sg-Tqz">
-                                <rect key="frame" x="20" y="233" width="178" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="200" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hAK-Sg-Tqz">
+                                <rect key="frame" x="20" y="192" width="178" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="Eyb-UB-fYT"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Contacts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="H0E-5j-WeM">
-                                <rect key="frame" x="20" y="204" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Contacts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0E-5j-WeM">
+                                <rect key="frame" x="20" y="163" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kPJ-ow-42e">
-                                <rect key="frame" x="20" y="122" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPJ-ow-42e">
+                                <rect key="frame" x="20" y="84" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test" borderStyle="roundedRect" minimumFontSize="17" id="529-6J-5Yu">
-                                <rect key="frame" x="20" y="151" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Test" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="529-6J-5Yu">
+                                <rect key="frame" x="20" y="113" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="lbM-9I-fOQ"/>
+                                </connections>
                             </textField>
-                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="Je1-dZ-u5q">
-                                <rect key="frame" x="206" y="233" width="94" height="29"/>
+                            <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="200" maximumValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="Je1-dZ-u5q">
+                                <rect key="frame" x="206" y="193" width="94" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <action selector="countOfPersonsStepperValueDidChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ZfS-Po-pyN"/>
+                                </connections>
                             </stepper>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5ll-jZ-p25">
-                                <rect key="frame" x="79" y="344" width="162" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-jZ-p25">
+                                <rect key="frame" x="120" y="280" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Depopulate">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="depopulate:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ESt-wN-dOe"/>
+                                    <action selector="depopulateButtonDidTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="q8D-uH-VFc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hAK-Sg-Tqz" firstAttribute="top" secondItem="H0E-5j-WeM" secondAttribute="bottom" constant="8" symbolic="YES" id="2bM-5S-FLx"/>
+                            <constraint firstItem="fZS-TI-Soh" firstAttribute="top" secondItem="hAK-Sg-Tqz" secondAttribute="bottom" constant="20" id="4I5-Ow-yU8"/>
+                            <constraint firstAttribute="trailing" secondItem="H0E-5j-WeM" secondAttribute="trailing" constant="20" symbolic="YES" id="4WV-39-iIg"/>
+                            <constraint firstItem="5ll-jZ-p25" firstAttribute="width" secondItem="fZS-TI-Soh" secondAttribute="width" id="4cX-YX-gxr"/>
+                            <constraint firstItem="kPJ-ow-42e" firstAttribute="centerX" secondItem="529-6J-5Yu" secondAttribute="centerX" id="Ao6-D4-PkH"/>
+                            <constraint firstItem="5ll-jZ-p25" firstAttribute="centerX" secondItem="fZS-TI-Soh" secondAttribute="centerX" id="Do8-sY-BIH"/>
+                            <constraint firstItem="Je1-dZ-u5q" firstAttribute="centerY" secondItem="hAK-Sg-Tqz" secondAttribute="centerY" id="I6Q-qQ-bMH"/>
+                            <constraint firstItem="H0E-5j-WeM" firstAttribute="top" secondItem="529-6J-5Yu" secondAttribute="bottom" constant="20" id="J8D-mm-b3J"/>
+                            <constraint firstItem="Je1-dZ-u5q" firstAttribute="leading" secondItem="hAK-Sg-Tqz" secondAttribute="trailing" constant="8" symbolic="YES" id="TQw-XF-Kcp"/>
+                            <constraint firstItem="kPJ-ow-42e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="Yli-qj-bXr"/>
+                            <constraint firstItem="kPJ-ow-42e" firstAttribute="width" secondItem="529-6J-5Yu" secondAttribute="width" id="aXA-aM-RyJ"/>
+                            <constraint firstItem="5ll-jZ-p25" firstAttribute="top" secondItem="fZS-TI-Soh" secondAttribute="bottom" constant="8" symbolic="YES" id="fNK-PP-q0w"/>
+                            <constraint firstAttribute="trailing" secondItem="Je1-dZ-u5q" secondAttribute="trailing" constant="20" symbolic="YES" id="hTS-3J-sRF"/>
+                            <constraint firstItem="kPJ-ow-42e" firstAttribute="top" secondItem="Tcj-rb-yUf" secondAttribute="bottom" constant="20" id="i8B-eB-Qr0"/>
+                            <constraint firstAttribute="centerX" secondItem="fZS-TI-Soh" secondAttribute="centerX" id="n9i-Cx-wZo"/>
+                            <constraint firstItem="529-6J-5Yu" firstAttribute="top" secondItem="kPJ-ow-42e" secondAttribute="bottom" constant="8" symbolic="YES" id="nN5-c0-1um"/>
+                            <constraint firstAttribute="trailing" secondItem="kPJ-ow-42e" secondAttribute="trailing" constant="20" symbolic="YES" id="qN1-1E-7If"/>
+                            <constraint firstItem="H0E-5j-WeM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="uhL-jk-057"/>
+                            <constraint firstItem="hAK-Sg-Tqz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="vfD-6f-hlj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Populate" id="xLh-UW-jjO">
                         <barButtonItem key="rightBarButtonItem" title="Contacts" id="tbT-fP-Psl">
                             <connections>
-                                <action selector="contacts:" destination="vXZ-lx-hvc" id="qXx-hp-EIO"/>
+                                <action selector="contactsButtonAction:" destination="vXZ-lx-hvc" id="Hlp-Db-ykW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="countOfPersonsStepper" destination="Je1-dZ-u5q" id="wTd-CH-20E"/>
                         <outlet property="countOfPersonsTextField" destination="hAK-Sg-Tqz" id="C1F-la-hXB"/>
                         <outlet property="depopulateButton" destination="5ll-jZ-p25" id="Jc5-rc-1vc"/>
                         <outlet property="groupNameTextField" destination="529-6J-5Yu" id="qZK-w4-kPf"/>

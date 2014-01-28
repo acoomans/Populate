@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/AddressBookUI.h>
 
-@interface ACPopulateViewController : UIViewController <UIAlertViewDelegate, ABPeoplePickerNavigationControllerDelegate>
+@interface ACPopulateViewController : UIViewController <UIAlertViewDelegate, ABPeoplePickerNavigationControllerDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *groupNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *countOfPersonsTextField;
+@property (nonatomic, weak) IBOutlet UIStepper *countOfPersonsStepper;
 
 @property (nonatomic, weak) IBOutlet UIButton *populateButton;
 @property (nonatomic, weak) IBOutlet UIButton *depopulateButton;

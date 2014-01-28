@@ -9,15 +9,23 @@
 #import "ACPopulateViewController.h"
 #import "PopulateKit.h"
 
+static const NSInteger ACPopulateViewControllerMaxCountOfPersons = 10000;
+
+
 @interface ACPopulateViewController ()
 @end
 
 @implementation ACPopulateViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.countOfPersonsStepper.value = [self.countOfPersonsTextField.text doubleValue];
+}
+
 
 #pragma mark - actions
 
-- (IBAction)populate:(id)sender {
+- (IBAction)populateButtonDidTouchUpInside:(id)sender {
     
     self.populateButton.enabled = NO;
     
@@ -37,7 +45,7 @@
                            }];
 }
 
-- (IBAction)depopulate:(id)sender {
+- (IBAction)depopulateButtonDidTouchUpInside:(id)sender {
     [[[UIAlertView alloc] initWithTitle:@"Depopulate"
                                   message:[NSString stringWithFormat:@"Remove group \"%@\" and all its contacts?", self.groupNameTextField.text]
                                  delegate:self
@@ -45,7 +53,11 @@
                         otherButtonTitles:@"Ok", nil] show];
 }
 
-- (IBAction)contacts:(id)sender {
+- (IBAction)countOfPersonsStepperValueDidChange:(id)sender {
+    self.countOfPersonsTextField.text = [NSString stringWithFormat:@"%i", MIN((int)self.countOfPersonsStepper.value, ACPopulateViewControllerMaxCountOfPersons)];
+}
+
+- (IBAction)contactsButtonAction:(id)sender {
     ABPeoplePickerNavigationController *peoplePickerNavigationController = [[ABPeoplePickerNavigationController alloc] init];
     peoplePickerNavigationController.peoplePickerDelegate = self;
     [self presentViewController:peoplePickerNavigationController animated:YES completion:nil];
@@ -90,6 +102,25 @@
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
+}
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    if (textField == self.countOfPersonsTextField) {
+        NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+        self.countOfPersonsStepper.value = MIN([newString integerValue], ACPopulateViewControllerMaxCountOfPersons);
+        self.countOfPersonsTextField.text = [NSString stringWithFormat:@"%i", (int)self.countOfPersonsStepper.value];
+        return NO;
+    }
+    return YES;
+}
+
 
 
 @end
