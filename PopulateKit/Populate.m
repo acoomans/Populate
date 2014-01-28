@@ -16,13 +16,15 @@
 
 - (void)populateGroupWithName:(NSString*)groupName
            withCountOfPersons:(NSUInteger)countOfPersons
-                      fromSet:(ACPersonSet*)personSet {
-    [self populateGroupWithName:groupName withCountOfPersons:countOfPersons fromSets:@[personSet]];
+                      fromSet:(ACPersonSet*)personSet
+                   completion:(void (^)(void))block {
+    [self populateGroupWithName:groupName withCountOfPersons:countOfPersons fromSets:@[personSet] completion:block];
 }
 
 - (void)populateGroupWithName:(NSString*)groupName
            withCountOfPersons:(NSUInteger)countOfPersons
-                     fromSets:(NSArray*)arrayOfPersonSets {
+                     fromSets:(NSArray*)arrayOfPersonSets
+                   completion:(void (^)(void))block {
     
     NSMutableArray *arrayOfPersons = [NSMutableArray arrayWithCapacity:countOfPersons];
     
@@ -31,10 +33,10 @@
         [arrayOfPersons addObject:[personSet randomPerson]];
     }
     
-    [self populateGroupWithName:groupName withPersons:arrayOfPersons];
+    [self populateGroupWithName:groupName withPersons:arrayOfPersons completion:block];
 }
 
-- (void)populateGroupWithName:(NSString*)groupName withPersons:(NSArray*)arrayOfPersons {
+- (void)populateGroupWithName:(NSString*)groupName withPersons:(NSArray*)arrayOfPersons completion:(void (^)(void))block {
     
     CFErrorRef error = NULL;
     
@@ -69,10 +71,12 @@
             CFRelease(groupRef);
         }
         CFRelease(addressBookRef);
+        
+        block();
     });
 }
 
-- (void)depopulateGroupWithName:(NSString*)groupName {
+- (void)depopulateGroupWithName:(NSString*)groupName completion:(void (^)(void))block {
     
     CFErrorRef error = NULL;
     
@@ -100,6 +104,8 @@
             }
         }
         CFRelease(addressBookRef);
+        
+        block();
     });
 }
 

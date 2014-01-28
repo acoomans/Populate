@@ -12,10 +12,10 @@
 
 @interface Populate : NSObject
 
-- (void)populateGroupWithName:(NSString*)groupName withPersons:(NSArray*)arrayOfPersons;
-- (void)populateGroupWithName:(NSString*)groupName withCountOfPersons:(NSUInteger)countOfPersons fromSet:(ACPersonSet*)personSet;
-- (void)populateGroupWithName:(NSString*)groupName withCountOfPersons:(NSUInteger)countOfPersons fromSets:(NSArray*)arrayOfPersonSets;
+- (void)populateGroupWithName:(NSString*)groupName withPersons:(NSArray*)arrayOfPersons completion:(void(^)(void))block;
+- (void)populateGroupWithName:(NSString*)groupName withCountOfPersons:(NSUInteger)countOfPersons fromSet:(ACPersonSet*)personSet completion:(void(^)(void))block;
+- (void)populateGroupWithName:(NSString*)groupName withCountOfPersons:(NSUInteger)countOfPersons fromSets:(NSArray*)arrayOfPersonSets completion:(void(^)(void))block;
 
-- (void)depopulateGroupWithName:(NSString*)groupName;
+- (void)depopulateGroupWithName:(NSString*)groupName completion:(void(^)(void))block;
 
 @end

@@ -75,7 +75,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="countOfPersonsTextField" destination="hAK-Sg-Tqz" id="C1F-la-hXB"/>
+                        <outlet property="depopulateButton" destination="5ll-jZ-p25" id="Jc5-rc-1vc"/>
                         <outlet property="groupNameTextField" destination="529-6J-5Yu" id="qZK-w4-kPf"/>
+                        <outlet property="populateButton" destination="fZS-TI-Soh" id="6IU-QL-Za4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

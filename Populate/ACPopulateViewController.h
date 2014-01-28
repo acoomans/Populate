@@ -14,4 +14,7 @@
 @property (nonatomic, weak) IBOutlet UITextField *groupNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *countOfPersonsTextField;
 
+@property (nonatomic, weak) IBOutlet UIButton *populateButton;
+@property (nonatomic, weak) IBOutlet UIButton *depopulateButton;
+
 @end

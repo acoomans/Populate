@@ -37,11 +37,11 @@
     
     Populate *populate = [[Populate alloc] init];
     
-    [populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC]];
+    [populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC] completion:nil];
     
-    [populate depopulateGroupWithName:@"Test"];
+    [populate depopulateGroupWithName:@"Test" completion:nil];
     
-    [populate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage]];
+    [populate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage] completion:nil];
      
     */
     

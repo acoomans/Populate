@@ -18,13 +18,18 @@
 #pragma mark - actions
 
 - (IBAction)populate:(id)sender {
+    
+    self.populateButton.enabled = NO;
+    
     [[[Populate alloc] init] populateGroupWithName:self.groupNameTextField.text
                                 withCountOfPersons:[self.countOfPersonsTextField.text integerValue]
-                                           fromSet:[ACPersonSet personSetWithRandomNameAndImage]];
+                                           fromSet:[ACPersonSet personSetWithRandomNameAndImage]
+                                        completion:^{
+                                            self.populateButton.enabled = YES;
+     }];
 }
 
 - (IBAction)depopulate:(id)sender {
-    
     [[[UIAlertView alloc] initWithTitle:@"Depopulate"
                                   message:[NSString stringWithFormat:@"Remove group \"%@\" and all its contacts?", self.groupNameTextField.text]
                                  delegate:self
@@ -42,14 +47,19 @@
 #pragma mark - UIAlertViewDelegate
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    self.depopulateButton.enabled = NO;
     
     switch (buttonIndex) {
-        case 0:
+        case 0: {
             break;
+        }
             
-        case 1:
-            [[[Populate alloc] init] depopulateGroupWithName:self.groupNameTextField.text];
+        case 1: {
+            [[[Populate alloc] init] depopulateGroupWithName:self.groupNameTextField.text completion:^{
+                self.depopulateButton.enabled = YES;
+            }];
             break;
+        }
             
         default:
             break;
