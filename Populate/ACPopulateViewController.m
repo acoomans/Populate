@@ -11,6 +11,16 @@
 
 static const NSInteger ACPopulateViewControllerMaxCountOfPersons = 10000;
 
+NS_ENUM(NSInteger, ACPopulateViewControllerNameType) {
+    ACPopulateViewControllerNameTypeRandom = 0,
+    ACPopulateViewControllerNameTypeReal = 1,
+};
+
+NS_ENUM(NSInteger, ACPopulateViewControllerImageType) {
+    ACPopulateViewControllerImageTypeColor = 0,
+    ACPopulateViewControllerImageTypeIdenticon = 1,
+    ACPopulateViewControllerImageTypeFace = 2,
+};
 
 @interface ACPopulateViewController ()
 @end
@@ -27,18 +37,55 @@ static const NSInteger ACPopulateViewControllerMaxCountOfPersons = 10000;
 
 - (IBAction)populateButtonDidTouchUpInside:(id)sender {
     
+    
+    ACNameSet *maleNameSet = nil;
+    ACNameSet *femaleNameSet = nil;
+    ACNameSet *surnameSet = nil;
+    
+    ACImageSet *maleImageSet = nil;
+    ACImageSet *femaleImageSet = nil;
+    
+    switch (self.nameSegmentedControl.selectedSegmentIndex) {
+        case ACPopulateViewControllerNameTypeRandom:
+            surnameSet = maleNameSet = femaleNameSet = [ACNameSet randomNameSet];
+            break;
+            
+        case ACPopulateViewControllerNameTypeReal:
+        default:
+            maleNameSet = [ACNameSet commonMaleNameSet];
+            femaleNameSet = [ACNameSet commonFemaleNameSet];
+            surnameSet = [ACNameSet commonSurnameSet];
+            break;
+    }
+    
+    switch (self.imageSegmentedControl.selectedSegmentIndex) {
+        case ACPopulateViewControllerImageTypeColor:
+            maleImageSet = femaleImageSet = [ACImageSet randomColorImageSet];
+            break;
+        
+        case ACPopulateViewControllerImageTypeFace:
+            maleImageSet = [ACImageSet maleFaceImageSet];
+            femaleImageSet = [ACImageSet femaleFaceImageSet];
+            break;
+            
+        case ACPopulateViewControllerImageTypeIdenticon:
+        default:
+            maleImageSet = femaleImageSet = [ACImageSet identiconImageSet];
+            break;
+    }
+    
     self.populateButton.enabled = NO;
     
     [ACPopulate populateGroupWithName:self.groupNameTextField.text
                    withCountOfPersons:[self.countOfPersonsTextField.text integerValue]
                              fromSets:@[
-                                        [ACPersonSet setWithFirstNameSet:[ACNameSet commonMaleNameSet]
-                                                             lastNameSet:[ACNameSet commonSurnameSet]
-                                                                imageSet:[ACImageSet maleFaceImageSet]],
+                                        [ACPersonSet setWithFirstNameSet:maleNameSet
+                                                             lastNameSet:surnameSet
+                                                                imageSet:maleImageSet],
                                         
-                                        [ACPersonSet setWithFirstNameSet:[ACNameSet commonFemaleNameSet]
-                                                             lastNameSet:[ACNameSet commonSurnameSet]
-                                                                imageSet:[ACImageSet femaleFaceImageSet]]
+                                        [ACPersonSet setWithFirstNameSet:femaleNameSet
+                                                             lastNameSet:surnameSet
+                                                                imageSet:femaleImageSet]
                                         ]
                            completion:^{
                                self.populateButton.enabled = YES;

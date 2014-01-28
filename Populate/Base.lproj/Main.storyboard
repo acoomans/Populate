@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZS-TI-Soh">
-                                <rect key="frame" x="120" y="242" width="80" height="30"/>
+                                <rect key="frame" x="120" y="328" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Populate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,7 +66,7 @@
                                 </connections>
                             </stepper>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-jZ-p25">
-                                <rect key="frame" x="120" y="280" width="80" height="30"/>
+                                <rect key="frame" x="120" y="378" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Depopulate">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,28 +76,71 @@
                                     <action selector="depopulateButtonDidTouchUpInside:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="q8D-uH-VFc"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="Kty-4C-2Z0">
+                                <rect key="frame" x="83" y="239" width="217" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Random"/>
+                                    <segment title="Real"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="GaN-Wc-sx4">
+                                <rect key="frame" x="83" y="280" width="217" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Color"/>
+                                    <segment title="Identicon"/>
+                                    <segment title="Face"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Names" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fat-ed-brY">
+                                <rect key="frame" x="20" y="242" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Photos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kpf-Og-ZfR">
+                                <rect key="frame" x="20" y="283" width="55" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hAK-Sg-Tqz" firstAttribute="top" secondItem="H0E-5j-WeM" secondAttribute="bottom" constant="8" symbolic="YES" id="2bM-5S-FLx"/>
-                            <constraint firstItem="fZS-TI-Soh" firstAttribute="top" secondItem="hAK-Sg-Tqz" secondAttribute="bottom" constant="20" id="4I5-Ow-yU8"/>
+                            <constraint firstItem="Kpf-Og-ZfR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="3bY-j5-FlR"/>
                             <constraint firstAttribute="trailing" secondItem="H0E-5j-WeM" secondAttribute="trailing" constant="20" symbolic="YES" id="4WV-39-iIg"/>
                             <constraint firstItem="5ll-jZ-p25" firstAttribute="width" secondItem="fZS-TI-Soh" secondAttribute="width" id="4cX-YX-gxr"/>
+                            <constraint firstItem="Kty-4C-2Z0" firstAttribute="height" secondItem="GaN-Wc-sx4" secondAttribute="height" id="5VT-Lj-MxO"/>
                             <constraint firstItem="kPJ-ow-42e" firstAttribute="centerX" secondItem="529-6J-5Yu" secondAttribute="centerX" id="Ao6-D4-PkH"/>
                             <constraint firstItem="5ll-jZ-p25" firstAttribute="centerX" secondItem="fZS-TI-Soh" secondAttribute="centerX" id="Do8-sY-BIH"/>
+                            <constraint firstItem="fat-ed-brY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="HNU-av-tl5"/>
                             <constraint firstItem="Je1-dZ-u5q" firstAttribute="centerY" secondItem="hAK-Sg-Tqz" secondAttribute="centerY" id="I6Q-qQ-bMH"/>
+                            <constraint firstItem="Kty-4C-2Z0" firstAttribute="width" secondItem="GaN-Wc-sx4" secondAttribute="width" id="I7K-mD-fGT"/>
                             <constraint firstItem="H0E-5j-WeM" firstAttribute="top" secondItem="529-6J-5Yu" secondAttribute="bottom" constant="20" id="J8D-mm-b3J"/>
+                            <constraint firstItem="GaN-Wc-sx4" firstAttribute="leading" secondItem="Kpf-Og-ZfR" secondAttribute="trailing" constant="8" symbolic="YES" id="J8r-Dj-GIj"/>
+                            <constraint firstItem="fat-ed-brY" firstAttribute="width" secondItem="Kpf-Og-ZfR" secondAttribute="width" id="Mxj-ds-q92"/>
+                            <constraint firstItem="Kty-4C-2Z0" firstAttribute="leading" secondItem="fat-ed-brY" secondAttribute="trailing" constant="8" symbolic="YES" id="OXd-0h-CSq"/>
+                            <constraint firstItem="fat-ed-brY" firstAttribute="centerY" secondItem="Kty-4C-2Z0" secondAttribute="centerY" constant="-0.5" id="QIa-gs-IsR"/>
                             <constraint firstItem="Je1-dZ-u5q" firstAttribute="leading" secondItem="hAK-Sg-Tqz" secondAttribute="trailing" constant="8" symbolic="YES" id="TQw-XF-Kcp"/>
+                            <constraint firstAttribute="trailing" secondItem="Kty-4C-2Z0" secondAttribute="trailing" constant="20" symbolic="YES" id="VyD-LN-A8i"/>
                             <constraint firstItem="kPJ-ow-42e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="Yli-qj-bXr"/>
                             <constraint firstItem="kPJ-ow-42e" firstAttribute="width" secondItem="529-6J-5Yu" secondAttribute="width" id="aXA-aM-RyJ"/>
-                            <constraint firstItem="5ll-jZ-p25" firstAttribute="top" secondItem="fZS-TI-Soh" secondAttribute="bottom" constant="8" symbolic="YES" id="fNK-PP-q0w"/>
+                            <constraint firstAttribute="trailing" secondItem="GaN-Wc-sx4" secondAttribute="trailing" constant="20" symbolic="YES" id="b3V-Ia-haU"/>
+                            <constraint firstItem="GaN-Wc-sx4" firstAttribute="centerY" secondItem="Kpf-Og-ZfR" secondAttribute="centerY" constant="0.5" id="dme-cY-l0d"/>
+                            <constraint firstItem="fat-ed-brY" firstAttribute="top" secondItem="hAK-Sg-Tqz" secondAttribute="bottom" constant="20" id="f8J-mO-4hi"/>
                             <constraint firstAttribute="trailing" secondItem="Je1-dZ-u5q" secondAttribute="trailing" constant="20" symbolic="YES" id="hTS-3J-sRF"/>
                             <constraint firstItem="kPJ-ow-42e" firstAttribute="top" secondItem="Tcj-rb-yUf" secondAttribute="bottom" constant="20" id="i8B-eB-Qr0"/>
+                            <constraint firstItem="fZS-TI-Soh" firstAttribute="top" secondItem="GaN-Wc-sx4" secondAttribute="bottom" constant="20" id="ifn-VD-7xk"/>
                             <constraint firstAttribute="centerX" secondItem="fZS-TI-Soh" secondAttribute="centerX" id="n9i-Cx-wZo"/>
                             <constraint firstItem="529-6J-5Yu" firstAttribute="top" secondItem="kPJ-ow-42e" secondAttribute="bottom" constant="8" symbolic="YES" id="nN5-c0-1um"/>
+                            <constraint firstItem="Kpf-Og-ZfR" firstAttribute="top" secondItem="fat-ed-brY" secondAttribute="bottom" constant="20" id="oYz-Oo-yzH"/>
                             <constraint firstAttribute="trailing" secondItem="kPJ-ow-42e" secondAttribute="trailing" constant="20" symbolic="YES" id="qN1-1E-7If"/>
                             <constraint firstItem="H0E-5j-WeM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="uhL-jk-057"/>
                             <constraint firstItem="hAK-Sg-Tqz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" symbolic="YES" id="vfD-6f-hlj"/>
+                            <constraint firstItem="5ll-jZ-p25" firstAttribute="top" secondItem="fZS-TI-Soh" secondAttribute="bottom" constant="20" id="yMi-rG-mm1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Populate" id="xLh-UW-jjO">
@@ -112,6 +155,8 @@
                         <outlet property="countOfPersonsTextField" destination="hAK-Sg-Tqz" id="C1F-la-hXB"/>
                         <outlet property="depopulateButton" destination="5ll-jZ-p25" id="Jc5-rc-1vc"/>
                         <outlet property="groupNameTextField" destination="529-6J-5Yu" id="qZK-w4-kPf"/>
+                        <outlet property="imageSegmentedControl" destination="GaN-Wc-sx4" id="pDT-qh-S6j"/>
+                        <outlet property="nameSegmentedControl" destination="Kty-4C-2Z0" id="kdG-oZ-Q5h"/>
                         <outlet property="populateButton" destination="fZS-TI-Soh" id="6IU-QL-Za4"/>
                     </connections>
                 </viewController>
