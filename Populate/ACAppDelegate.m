@@ -8,11 +8,35 @@
 
 #import "ACAppDelegate.h"
 
+#import "PopulateKit.h"
+
 @implementation ACAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    ACPerson *personA = [[ACPerson alloc] initWithFirstname:@"Alice"
+                                                   lastName:@"A"
+                                                      email:@"alice@example.com"
+                                                      phone:@"555-111-1111"
+                                                      image:nil];
+    ACPerson *personB = [[ACPerson alloc] initWithFirstname:@"Bob"
+                                                   lastName:@"B"
+                                                      email:@"bob@example.com"
+                                                      phone:@"555-222-2222"
+                                                      image:nil];
+    ACPerson *personC = [[ACPerson alloc] initWithFirstname:@"Charlie"
+                                                   lastName:@"C"
+                                                      email:@"charles@example.com"
+                                                      phone:@"555-333-3333"
+                                                      image:nil];
+    
+    Populate *populate = [[Populate alloc] init];
+    
+    [populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC]];
+    //[populate depopulateGroupWithName:@"Test"];
+    
     return YES;
 }
 							
