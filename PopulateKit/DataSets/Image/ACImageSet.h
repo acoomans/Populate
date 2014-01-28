@@ -24,6 +24,14 @@
  */
 + (instancetype)identiconImageSet;
 
+/** A set of male faces.
+ */
++ (instancetype)maleFaceImageSet;
+
+/** A set of female faces.
+ */
++ (instancetype)femaleFaceImageSet;
+
 /** Returns a random image
  * @discussion the default implementation returns nil.
  */

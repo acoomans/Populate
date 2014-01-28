@@ -9,6 +9,8 @@
 #import "ACImageSet.h"
 #import "ACRandomColorImageSet.h"
 #import "ACIdenticonImageSet.h"
+#import "ACMaleFaceImageSet.h"
+#import "ACFemaleFaceImageSet.h"
 
 @implementation ACImageSet
 
@@ -26,6 +28,24 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _set = [[ACIdenticonImageSet alloc] init];
+    });
+    return _set;
+}
+
++ (instancetype)maleFaceImageSet {
+    static ACMaleFaceImageSet *_set = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _set = [[ACMaleFaceImageSet alloc] init];
+    });
+    return _set;
+}
+
++ (instancetype)femaleFaceImageSet {
+    static ACFemaleFaceImageSet *_set = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _set = [[ACFemaleFaceImageSet alloc] init];
     });
     return _set;
 }

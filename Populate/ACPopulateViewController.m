@@ -26,10 +26,10 @@
                              fromSets:@[
                                         [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonMaleNameSet]
                                                                       lastNameSet:[ACNameSet commonSurnameSet]
-                                                                         imageSet:[ACImageSet identiconImageSet]],
+                                                                         imageSet:[ACImageSet maleFaceImageSet]],
                                         [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonFemaleNameSet]
                                                                       lastNameSet:[ACNameSet commonSurnameSet]
-                                                                         imageSet:[ACImageSet identiconImageSet]]
+                                                                         imageSet:[ACImageSet femaleFaceImageSet]]
                                         ]
                            completion:^{
                                self.populateButton.enabled = YES;

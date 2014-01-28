@@ -39,4 +39,20 @@
     XCTAssertTrue(image.size.height > 0);
 }
 
+#pragma mark - ACMaleFaceImageSet
+
+- (void)testMaleFaceImageSet {
+    UIImage *image = [[ACImageSet maleFaceImageSet] randomImage];
+    XCTAssertTrue(image.size.width > 0);
+    XCTAssertTrue(image.size.height > 0);
+}
+
+#pragma mark - ACFemaleFaceImageSet
+
+- (void)testFemaleFaceImageSet {
+    UIImage *image = [[ACImageSet femaleFaceImageSet] randomImage];
+    XCTAssertTrue(image.size.width > 0);
+    XCTAssertTrue(image.size.height > 0);
+}
+
 @end
