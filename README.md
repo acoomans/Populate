@@ -1,6 +1,6 @@
 # Populate
 
-Populate is both an app and a library to easily add fake (random) contacts to the iOS address book.
+Populate is both an app and a library to easily add random-generated contacts to the iOS address book.
 
 [![Build Status](https://api.travis-ci.org/acoomans/Populate.png)](https://api.travis-ci.org/acoomans/Populate.png)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/Populate/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3APopulate%2A)
