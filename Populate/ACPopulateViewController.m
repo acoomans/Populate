@@ -11,6 +11,12 @@
 
 static const NSInteger ACPopulateViewControllerMaxCountOfPersons = 10000;
 
+static NSString * const ACPopulateViewControllerGroupNameKey = @"groupName";
+static NSString * const ACPopulateViewControllerCountOfPersonsKey = @"countOfPersons";
+static NSString * const ACPopulateViewControllerNameTypeKey = @"nameType";
+static NSString * const ACPopulateViewControllerImageTypeKey = @"imageType";
+
+
 NS_ENUM(NSInteger, ACPopulateViewControllerNameType) {
     ACPopulateViewControllerNameTypeRandom = 0,
     ACPopulateViewControllerNameTypeReal = 1,
@@ -29,6 +35,12 @@ NS_ENUM(NSInteger, ACPopulateViewControllerImageType) {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    self.groupNameTextField.text = [[NSUserDefaults standardUserDefaults] objectForKey:ACPopulateViewControllerGroupNameKey] ?: self.groupNameTextField.text;
+    self.countOfPersonsTextField.text = [[[NSUserDefaults standardUserDefaults] objectForKey:ACPopulateViewControllerCountOfPersonsKey] stringValue] ?: self.countOfPersonsTextField.text;
+    self.nameSegmentedControl.selectedSegmentIndex = [([[NSUserDefaults standardUserDefaults] objectForKey:ACPopulateViewControllerNameTypeKey] ?: @(self.nameSegmentedControl.selectedSegmentIndex)) integerValue];
+    self.imageSegmentedControl.selectedSegmentIndex = [([[NSUserDefaults standardUserDefaults] objectForKey:ACPopulateViewControllerImageTypeKey] ?: @(self.imageSegmentedControl.selectedSegmentIndex)) integerValue];
+    
     self.countOfPersonsStepper.value = [self.countOfPersonsTextField.text doubleValue];
 }
 
@@ -36,7 +48,6 @@ NS_ENUM(NSInteger, ACPopulateViewControllerImageType) {
 #pragma mark - actions
 
 - (IBAction)populateButtonDidTouchUpInside:(id)sender {
-    
     
     ACNameSet *maleNameSet = nil;
     ACNameSet *femaleNameSet = nil;
@@ -90,6 +101,12 @@ NS_ENUM(NSInteger, ACPopulateViewControllerImageType) {
                            completion:^{
                                self.populateButton.enabled = YES;
                            }];
+    
+    
+    [[NSUserDefaults standardUserDefaults] setObject:self.groupNameTextField.text forKey:ACPopulateViewControllerGroupNameKey];
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:[self.countOfPersonsTextField.text integerValue]] forKey:ACPopulateViewControllerCountOfPersonsKey];
+    [[NSUserDefaults standardUserDefaults] setObject:@(self.nameSegmentedControl.selectedSegmentIndex) forKey:ACPopulateViewControllerNameTypeKey];
+    [[NSUserDefaults standardUserDefaults] setObject:@(self.imageSegmentedControl.selectedSegmentIndex) forKey:ACPopulateViewControllerImageTypeKey];
 }
 
 - (IBAction)depopulateButtonDidTouchUpInside:(id)sender {
