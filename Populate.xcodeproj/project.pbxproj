@@ -49,6 +49,7 @@
 		5145DC3B189775DC007B97E6 /* ACNameSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC35189775DC007B97E6 /* ACNameSetTests.m */; };
 		5145DC3C189775DC007B97E6 /* NSCharacterSet_NSSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC36189775DC007B97E6 /* NSCharacterSet_NSSetTest.m */; };
 		5145DC3D189775DC007B97E6 /* NSString_RandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC37189775DC007B97E6 /* NSString_RandomTests.m */; };
+		51DE649D1897992200CA6E79 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE649C1897992200CA6E79 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		5145DC35189775DC007B97E6 /* ACNameSetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACNameSetTests.m; sourceTree = "<group>"; };
 		5145DC36189775DC007B97E6 /* NSCharacterSet_NSSetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_NSSetTest.m; sourceTree = "<group>"; };
 		5145DC37189775DC007B97E6 /* NSString_RandomTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_RandomTests.m; sourceTree = "<group>"; };
+		51DE649C1897992200CA6E79 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE649D1897992200CA6E79 /* AddressBook.framework in Frameworks */,
 				5145DBB718973A74007B97E6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +215,7 @@
 		5145DB7C1897392F007B97E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51DE649C1897992200CA6E79 /* AddressBook.framework */,
 				5145DB7D1897392F007B97E6 /* Foundation.framework */,
 				5145DB7F1897392F007B97E6 /* CoreGraphics.framework */,
 				5145DB811897392F007B97E6 /* UIKit.framework */,
