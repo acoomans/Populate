@@ -22,6 +22,21 @@
  */
 + (instancetype)personSetWithRandomNameAndImage;
 
+/** A set of ACPerson.
+ * @param firstnameSet A set of names.
+ * @param lastnameSet A set of names.
+ * @param imageSet A set of images.
+ */
++ (instancetype)setWithFirstNameSet:(ACNameSet*)firstnameSet
+                        lastNameSet:(ACNameSet*)lastnameSet
+                           imageSet:(ACImageSet*)imageSet;
+
+/** A set of ACPerson.
+ * @discussion Designated initializer.
+ * @param firstnameSet A set of names.
+ * @param lastnameSet A set of names.
+ * @param imageSet A set of images.
+ */
 - (instancetype)initWithFirstNameSet:(ACNameSet*)firstnameSet
                          lastNameSet:(ACNameSet*)lastnameSet
                             imageSet:(ACImageSet*)imageSet;

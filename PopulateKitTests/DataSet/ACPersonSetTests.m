@@ -30,4 +30,17 @@
     XCTAssertTrue(person.image.size.width > 0 && person.image.size.height > 0);
 }
 
+- (void)testRandomContact2 {
+    ACPersonSet *personSet = [ACPersonSet setWithFirstNameSet:[ACNameSet randomNameSet]
+                                                  lastNameSet:[ACNameSet randomNameSet]
+                                                     imageSet:[ACImageSet randomColorImageSet]];
+    
+    ACPerson *person = [personSet randomPerson];
+    XCTAssertTrue(person.firstName.length > 0);
+    XCTAssertTrue(person.lastName.length > 0);
+    XCTAssertTrue(person.email.length > 0 && [person.email rangeOfString:@"@"].location != NSNotFound);
+    XCTAssertTrue(person.phone.length > 0);
+    XCTAssertTrue(person.image.size.width > 0 && person.image.size.height > 0);
+}
+
 @end

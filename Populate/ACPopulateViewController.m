@@ -24,12 +24,13 @@
     [ACPopulate populateGroupWithName:self.groupNameTextField.text
                    withCountOfPersons:[self.countOfPersonsTextField.text integerValue]
                              fromSets:@[
-                                        [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonMaleNameSet]
-                                                                      lastNameSet:[ACNameSet commonSurnameSet]
-                                                                         imageSet:[ACImageSet maleFaceImageSet]],
-                                        [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonFemaleNameSet]
-                                                                      lastNameSet:[ACNameSet commonSurnameSet]
-                                                                         imageSet:[ACImageSet femaleFaceImageSet]]
+                                        [ACPersonSet setWithFirstNameSet:[ACNameSet commonMaleNameSet]
+                                                             lastNameSet:[ACNameSet commonSurnameSet]
+                                                                imageSet:[ACImageSet maleFaceImageSet]],
+                                        
+                                        [ACPersonSet setWithFirstNameSet:[ACNameSet commonFemaleNameSet]
+                                                             lastNameSet:[ACNameSet commonSurnameSet]
+                                                                imageSet:[ACImageSet femaleFaceImageSet]]
                                         ]
                            completion:^{
                                self.populateButton.enabled = YES;

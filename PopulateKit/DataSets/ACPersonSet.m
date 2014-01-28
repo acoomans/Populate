@@ -25,6 +25,14 @@
                                            imageSet:[ACImageSet randomColorImageSet]];
 }
 
++ (instancetype)setWithFirstNameSet:(ACNameSet*)firstnameSet
+                        lastNameSet:(ACNameSet*)lastnameSet
+                           imageSet:(ACImageSet*)imageSet {
+    return [[self.class alloc] initWithFirstNameSet:firstnameSet
+                                        lastNameSet:lastnameSet
+                                           imageSet:imageSet];
+}
+
 - (instancetype)initWithFirstNameSet:(ACNameSet*)firstnameSet
                          lastNameSet:(ACNameSet*)lastnameSet
                             imageSet:(ACImageSet*)imageSet {
