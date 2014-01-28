@@ -22,7 +22,8 @@ static NSString * const ACCommonFemaleNameSetResourceName = @"PopulateKit.bundle
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString* fileRoot = [[NSBundle mainBundle] pathForResource:ACCommonFemaleNameSetResourceName ofType:@"csv"];
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSString* fileRoot = [bundle pathForResource:ACCommonFemaleNameSetResourceName ofType:@"csv"];
         NSString* fileContents = [NSString stringWithContentsOfFile:fileRoot encoding:NSUTF8StringEncoding error:nil];
         _names = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     });

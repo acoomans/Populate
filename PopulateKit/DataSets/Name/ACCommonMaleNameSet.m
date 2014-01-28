@@ -20,9 +20,11 @@ static NSString * const ACCommonMaleNameSetResourceName = @"PopulateKit.bundle/c
 - (NSArray*)names {
     static NSArray *_names = nil;
     
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString* fileRoot = [[NSBundle mainBundle] pathForResource:ACCommonMaleNameSetResourceName ofType:@"csv"];
+        NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+        NSString* fileRoot = [bundle pathForResource:ACCommonMaleNameSetResourceName ofType:@"csv"];
         NSString* fileContents = [NSString stringWithContentsOfFile:fileRoot encoding:NSUTF8StringEncoding error:nil];
         _names = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     });
