@@ -387,6 +387,23 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		51DE6498189792B100CA6E79 /* Documentation */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "--project-name \"PopulateKit\"\n--project-company \"Arnaud Coomans\"\n--company-id \"com.acoomans\"\n--output build\n--create-docset \n--install-docset \n--create-html \n--exit-threshold 2 \n--no-repeat-first-par \n.";
+			buildConfigurationList = 51DE649B189792B100CA6E79 /* Build configuration list for PBXLegacyTarget "Documentation" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/local/bin/appledoc;
+			buildWorkingDirectory = PopulateKit;
+			dependencies = (
+			);
+			name = Documentation;
+			passBuildSettingsInEnvironment = 1;
+			productName = Documentation;
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		5145DB791897392F007B97E6 /* Populate */ = {
 			isa = PBXNativeTarget;
@@ -472,7 +489,7 @@
 						TestTargetID = 5145DB791897392F007B97E6;
 					};
 					5145DBC218973A74007B97E6 = {
-						TestTargetID = 5145DBB518973A74007B97E6;
+						TestTargetID = 5145DB791897392F007B97E6;
 					};
 				};
 			};
@@ -493,6 +510,7 @@
 				5145DB9A1897392F007B97E6 /* PopulateTests */,
 				5145DBB518973A74007B97E6 /* PopulateKit */,
 				5145DBC218973A74007B97E6 /* PopulateKitTests */,
+				51DE6498189792B100CA6E79 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -809,6 +827,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Populate.app/Populate";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -828,6 +847,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -836,6 +856,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Populate.app/Populate";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -851,7 +872,40 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		51DE6499189792B100CA6E79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		51DE649A189792B100CA6E79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -874,6 +928,7 @@
 				5145DBAE1897392F007B97E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5145DBAF1897392F007B97E6 /* Build configuration list for PBXNativeTarget "PopulateTests" */ = {
 			isa = XCConfigurationList;
@@ -882,6 +937,7 @@
 				5145DBB11897392F007B97E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5145DBD218973A74007B97E6 /* Build configuration list for PBXNativeTarget "PopulateKit" */ = {
 			isa = XCConfigurationList;
@@ -890,12 +946,22 @@
 				5145DBD418973A74007B97E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5145DBD518973A74007B97E6 /* Build configuration list for PBXNativeTarget "PopulateKitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5145DBD618973A74007B97E6 /* Debug */,
 				5145DBD718973A74007B97E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51DE649B189792B100CA6E79 /* Build configuration list for PBXLegacyTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51DE6499189792B100CA6E79 /* Debug */,
+				51DE649A189792B100CA6E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

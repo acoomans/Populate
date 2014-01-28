@@ -12,14 +12,22 @@
 #import "ACImageSet.h"
 #import "ACPerson.h"
 
+
+/** A set of ACPerson.
+ */
+
 @interface ACPersonSet : NSObject
 
+/** A set of ACPerson where the name and the image are generated randomly.
+ */
 + (instancetype)personSetWithRandomNameAndImage;
 
 - (instancetype)initWithFirstNameSet:(ACNameSet*)firstnameSet
                          lastNameSet:(ACNameSet*)lastnameSet
                             imageSet:(ACImageSet*)imageSet;
 
+/** Returns a random ACPerson.
+ */
 - (ACPerson*)randomPerson;
 
 @end

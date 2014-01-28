@@ -10,6 +10,19 @@
 
 @interface ACRandomColorImageSet : ACImageSet
 
+/** Returns a random image.
+ * @param size The size of the image.
+ * @return a one randomly-chosen color image.
+ */
 - (UIImage*)randomImageWithSize:(CGSize)size;
+
+/** Returns a random image.
+ * @return a one randomly-chosen color image.
+ */
+- (UIImage*)randomImage;
+
+/** Number of images in the set.
+ */
+- (NSInteger)count;
     
 @end

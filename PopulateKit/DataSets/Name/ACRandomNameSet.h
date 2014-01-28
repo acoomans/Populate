@@ -10,4 +10,12 @@
 
 @interface ACRandomNameSet : ACNameSet
 
+/** Returns a random name.
+ */
+- (NSString*)randomName;
+
+/** Number of names in the set.
+ */
+- (NSInteger)count;
+
 @end
