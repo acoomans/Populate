@@ -16,6 +16,9 @@
 {
     // Override point for customization after application launch.
     
+    
+    /*
+    
     ACPerson *personA = [[ACPerson alloc] initWithFirstname:@"Alice"
                                                    lastName:@"A"
                                                       email:@"alice@example.com"
@@ -34,10 +37,14 @@
     
     Populate *populate = [[Populate alloc] init];
     
-    //[populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC]];
-    //[populate depopulateGroupWithName:@"Test"];
+    [populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC]];
+    
+    [populate depopulateGroupWithName:@"Test"];
     
     [populate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage]];
+     
+    */
+    
     
     return YES;
 }

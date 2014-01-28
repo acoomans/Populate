@@ -14,7 +14,7 @@
 		5145DB8A1897392F007B97E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DB891897392F007B97E6 /* main.m */; };
 		5145DB8E1897392F007B97E6 /* ACAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DB8D1897392F007B97E6 /* ACAppDelegate.m */; };
 		5145DB911897392F007B97E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5145DB8F1897392F007B97E6 /* Main.storyboard */; };
-		5145DB941897392F007B97E6 /* ACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DB931897392F007B97E6 /* ACViewController.m */; };
+		5145DB941897392F007B97E6 /* ACPopulateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DB931897392F007B97E6 /* ACPopulateViewController.m */; };
 		5145DB961897392F007B97E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5145DB951897392F007B97E6 /* Images.xcassets */; };
 		5145DB9D1897392F007B97E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB9C1897392F007B97E6 /* XCTest.framework */; };
 		5145DB9E1897392F007B97E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB7D1897392F007B97E6 /* Foundation.framework */; };
@@ -93,8 +93,8 @@
 		5145DB8C1897392F007B97E6 /* ACAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACAppDelegate.h; sourceTree = "<group>"; };
 		5145DB8D1897392F007B97E6 /* ACAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACAppDelegate.m; sourceTree = "<group>"; };
 		5145DB901897392F007B97E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5145DB921897392F007B97E6 /* ACViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACViewController.h; sourceTree = "<group>"; };
-		5145DB931897392F007B97E6 /* ACViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACViewController.m; sourceTree = "<group>"; };
+		5145DB921897392F007B97E6 /* ACPopulateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPopulateViewController.h; sourceTree = "<group>"; };
+		5145DB931897392F007B97E6 /* ACPopulateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPopulateViewController.m; sourceTree = "<group>"; };
 		5145DB951897392F007B97E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5145DB9B1897392F007B97E6 /* PopulateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5145DB9C1897392F007B97E6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -225,8 +225,8 @@
 			children = (
 				5145DB8C1897392F007B97E6 /* ACAppDelegate.h */,
 				5145DB8D1897392F007B97E6 /* ACAppDelegate.m */,
-				5145DB921897392F007B97E6 /* ACViewController.h */,
-				5145DB931897392F007B97E6 /* ACViewController.m */,
+				5145DB921897392F007B97E6 /* ACPopulateViewController.h */,
+				5145DB931897392F007B97E6 /* ACPopulateViewController.m */,
 				5145DB8F1897392F007B97E6 /* Main.storyboard */,
 				5145DB951897392F007B97E6 /* Images.xcassets */,
 				5145DB841897392F007B97E6 /* Supporting Files */,
@@ -532,7 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5145DB8E1897392F007B97E6 /* ACAppDelegate.m in Sources */,
-				5145DB941897392F007B97E6 /* ACViewController.m in Sources */,
+				5145DB941897392F007B97E6 /* ACPopulateViewController.m in Sources */,
 				5145DB8A1897392F007B97E6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -709,6 +709,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Populate/Populate-Prefix.pch";
 				INFOPLIST_FILE = "Populate/Populate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -723,6 +724,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Populate/Populate-Prefix.pch";
 				INFOPLIST_FILE = "Populate/Populate-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -782,6 +784,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -795,6 +798,7 @@
 				DSTROOT = /tmp/PopulateKit.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PopulateKit/PopulateKit-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
