@@ -11,7 +11,7 @@ Populate is both an app and a library to easily add random-generated contacts to
 
 ### Run the app
 
-1. Build and run.
+1. Build _Populate.xcworkspace_ (the workspace, not the project) and run it
 2. Choose a group name (useful for later deletion)
 3. Choose number of fake contacts
 4. Tap "populate" to add the contacts
@@ -58,11 +58,42 @@ To add custom-made contacts to the address book, create the contacts with the _A
                                                       phone:@"555-333-3333"
                                                       image:nil];
     
-    [ACPopulate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC] completion:nil];
+        [ACPopulate populateGroupWithName:@"Test"
+                              withPersons:@[personA, personB, personC]
+                               completion:nil];
     
 To add randomly-generated contacts instead, use a _ACPersonSet_:
     
-    [ACPopulate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage] completion:nil];
+        [ACPopulate populateGroupWithName:@"Test"
+                       withCountOfPersons:10
+                                  fromSet:[ACPersonSet personSetWithRandomNameAndImage]
+                               completion:nil];
+    
+It is possible to populate with a custom _ACPersonSet_ by using data sets (_ACNameSet_ and _ACImageSet_). Here is an example of populating with random first names, common US surnames and [identicon](https://en.wikipedia.org/wiki/Identicon) avatars:
+
+	[ACPopulate populateGroupWithName:@"Test"
+                   withCountOfPersons:10
+                              fromSet:[[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet randomNameSet]
+                                                                    lastNameSet:[ACNameSet commonSurnameSet]
+                                                                       imageSet:[ACImageSet identiconImageSet]]
+                           completion:nil];
+
+Or you can supply multiple _ACPersonSet_, like a male and a female set:
+
+	[ACPopulate populateGroupWithName:@"Test"
+                   withCountOfPersons:10
+                             fromSets:@[
+                                        [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonMaleNameSet]
+                                                                      lastNameSet:[ACNameSet commonSurnameSet]
+                                                                         imageSet:[ACImageSet maleFaceImageSet]],
+                                                                         
+                                        [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonFemaleNameSet]
+                                                                      lastNameSet:[ACNameSet commonSurnameSet]
+                                                                         imageSet:[ACImageSet femaleFaceImageSet]]
+                                        ]
+                           completion:nil];
+                        
+                           
 
 If you want to delete the _Test_ group and all its members:
 
