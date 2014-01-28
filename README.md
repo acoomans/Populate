@@ -1,23 +1,37 @@
 # Populate
 
-Populate is both an app and a library to easily add random-generated contacts to the iOS address book.
+Populate is both an iOS app and library to easily create random-generated contacts.
+
+- the Populate app let you configure and add contacts to the iOS address book.
+- the PopulateKit library let you create contacts for either adding to the address book or any other purpose.
+
 
 [![Build Status](https://api.travis-ci.org/acoomans/Populate.png)](https://api.travis-ci.org/acoomans/Populate.png)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/v/Populate/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3APopulate%2A)
 [![Cocoapods](https://cocoapod-badges.herokuapp.com/p/Populate/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3APopulate%2A)
 
 
+## Screenshots
+
+![screenshot01](https://github.com/acoomans/Populate/raw/master/Screenshots/screenshot01.png)
+![screenshot02](https://github.com/acoomans/Populate/raw/master/Screenshots/screenshot02.png)
+
+
 ## Populate app
 
 ### Run the app
 
-1. Build _Populate.xcworkspace_ (the workspace, not the project) and run it
-2. Choose a group name (useful for later deletion)
-3. Choose number of fake contacts
-4. Tap "populate" to add the contacts
-5. Tap "depopulate" to remove the group and all its member contacts
+1. Install the [pods](http://cocoapods.org) with `pod install`
+2. Build _Populate.xcworkspace_ (the workspace, not the project) and run it
+3. Choose a group name (useful for later deletion), number of contacts, type of name and type of photo
+5. Tap _populate_ to add the contacts
+6. Tap _depopulate_ to remove the group and all its member contacts
+
+You can tap _contacts_ to open the address book without switching apps.
+
 
 ** Be careful not to erase your real contact if you use Populate on a real device **
+
 
 ## PopulateKit library
 
@@ -27,7 +41,7 @@ You can either clone this repository and add the files in the _PopulateKit_ dire
 
 Add a pod entry to your Podfile:
 
-    pod 'PopulateKit', '~> 0.0.3'
+    pod 'PopulateKit', '~> 0.0.4'
 
 Install the pod(s) by running:
 
@@ -39,8 +53,10 @@ Install the pod(s) by running:
 Import the header
 
 	#import "PopulateKit.h"
+	
+#### Adding contacts to the address book
 
-To add custom-made contacts to the address book, create the contacts with the _ACPerson_ wrapper and add them to _Test_ group in the address book:
+To add hand-made contacts to the address book, create the contacts with the _ACPerson_ wrapper and add them to _Test_ group in the address book:
 
 	ACPerson *personA = [[ACPerson alloc] initWithFirstname:@"Alice"
                                                    lastName:@"A"
@@ -73,9 +89,9 @@ It is possible to populate with a custom _ACPersonSet_ by using data sets (_ACNa
 
 	[ACPopulate populateGroupWithName:@"Test"
                    withCountOfPersons:10
-                              fromSet:[[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet randomNameSet]
-                                                                    lastNameSet:[ACNameSet commonSurnameSet]
-                                                                       imageSet:[ACImageSet identiconImageSet]]
+                              fromSet:[ACPersonSet setWithFirstNameSet:[ACNameSet randomNameSet]
+                                                           lastNameSet:[ACNameSet commonSurnameSet]
+                                                              imageSet:[ACImageSet identiconImageSet]
                            completion:nil];
 
 Or you can supply multiple _ACPersonSet_, like a male and a female set:
@@ -83,23 +99,36 @@ Or you can supply multiple _ACPersonSet_, like a male and a female set:
 	[ACPopulate populateGroupWithName:@"Test"
                    withCountOfPersons:10
                              fromSets:@[
-                                        [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonMaleNameSet]
-                                                                      lastNameSet:[ACNameSet commonSurnameSet]
-                                                                         imageSet:[ACImageSet maleFaceImageSet]],
+                                        [ACPersonSet setWithFirstNameSet:[ACNameSet commonMaleNameSet]
+                                                             lastNameSet:[ACNameSet commonSurnameSet]
+                                                                imageSet:[ACImageSet maleFaceImageSet]],
                                                                          
-                                        [[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet commonFemaleNameSet]
-                                                                      lastNameSet:[ACNameSet commonSurnameSet]
-                                                                         imageSet:[ACImageSet femaleFaceImageSet]]
+                                        [ACPersonSet setWithFirstNameSet:[ACNameSet commonFemaleNameSet]
+                                                             lastNameSet:[ACNameSet commonSurnameSet]
+                                                                imageSet:[ACImageSet femaleFaceImageSet]]
                                         ]
                            completion:nil];
                         
                            
 
-If you want to delete the _Test_ group and all its members:
+If you want to delete the _Test_ group and all its members from the addess book:
 
     [ACPopulate depopulateGroupWithName:@"Test" completion:nil];
 
 You can also have a look at the _Populate_ app for inspiration.
+
+
+#### Generating contacts
+
+If you want to use randomly-generated contacts directly:
+
+	ACPersonSet *personSet = [ACPersonSet setWithFirstNameSet:[ACNameSet randomNameSet]
+                                                  lastNameSet:[ACNameSet commonSurnameSet]
+                                                     imageSet:[ACImageSet identiconImageSet]];
+	ACPerson *person = [personSet randomPerson];
+    NSLog(@"%@", person.firstName);
+	
+
 
 
 ## Documentation
