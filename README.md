@@ -23,11 +23,11 @@ Populate is both an app and a library to easily add random-generated contacts to
 
 ### Install
 
-You can either clone this repository and add the files in the _Populate_ directory to your project; or use [CocoaPods](http://cocoapods.org).
+You can either clone this repository and add the files in the _PopulateKit_ directory to your project; or use [CocoaPods](http://cocoapods.org).
 
 Add a pod entry to your Podfile:
 
-    pod 'Populate', '~> 0.0.1'
+    pod 'PopulateKit', '~> 0.0.1'
 
 Install the pod(s) by running:
 
@@ -35,6 +35,10 @@ Install the pod(s) by running:
 
 
 ### Usage
+
+Import the header
+
+	#import "PopulateKit.h"
 
 To add custom-made contacts to the address book, create the contacts with the _ACPerson_ wrapper and add them to _Test_ group in the address book:
 
