@@ -22,8 +22,8 @@
 		5145DBA71897392F007B97E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5145DBA51897392F007B97E6 /* InfoPlist.strings */; };
 		5145DBA91897392F007B97E6 /* PopulateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBA81897392F007B97E6 /* PopulateTests.m */; };
 		5145DBB718973A74007B97E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB7D1897392F007B97E6 /* Foundation.framework */; };
-		5145DBBC18973A74007B97E6 /* Populate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5145DBBB18973A74007B97E6 /* Populate.h */; };
-		5145DBBE18973A74007B97E6 /* Populate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBBD18973A74007B97E6 /* Populate.m */; };
+		5145DBBC18973A74007B97E6 /* ACPopulate.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5145DBBB18973A74007B97E6 /* ACPopulate.h */; };
+		5145DBBE18973A74007B97E6 /* ACPopulate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBBD18973A74007B97E6 /* ACPopulate.m */; };
 		5145DBC418973A74007B97E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB9C1897392F007B97E6 /* XCTest.framework */; };
 		5145DBC518973A74007B97E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB7D1897392F007B97E6 /* Foundation.framework */; };
 		5145DBC618973A74007B97E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB811897392F007B97E6 /* UIKit.framework */; };
@@ -76,7 +76,7 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				5145DBBC18973A74007B97E6 /* Populate.h in CopyFiles */,
+				5145DBBC18973A74007B97E6 /* ACPopulate.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +104,8 @@
 		5145DBA81897392F007B97E6 /* PopulateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopulateTests.m; sourceTree = "<group>"; };
 		5145DBB618973A74007B97E6 /* libPopulateKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPopulateKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5145DBBA18973A74007B97E6 /* PopulateKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopulateKit-Prefix.pch"; sourceTree = "<group>"; };
-		5145DBBB18973A74007B97E6 /* Populate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Populate.h; sourceTree = "<group>"; };
-		5145DBBD18973A74007B97E6 /* Populate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Populate.m; sourceTree = "<group>"; };
+		5145DBBB18973A74007B97E6 /* ACPopulate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACPopulate.h; sourceTree = "<group>"; };
+		5145DBBD18973A74007B97E6 /* ACPopulate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACPopulate.m; sourceTree = "<group>"; };
 		5145DBC318973A74007B97E6 /* PopulateKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5145DBCC18973A74007B97E6 /* PopulateKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopulateKitTests-Info.plist"; sourceTree = "<group>"; };
 		5145DBCE18973A74007B97E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -271,8 +271,8 @@
 			isa = PBXGroup;
 			children = (
 				5145DBEF189755EE007B97E6 /* PopulateKit.h */,
-				5145DBBB18973A74007B97E6 /* Populate.h */,
-				5145DBBD18973A74007B97E6 /* Populate.m */,
+				5145DBBB18973A74007B97E6 /* ACPopulate.h */,
+				5145DBBD18973A74007B97E6 /* ACPopulate.m */,
 				5145DBE8189753F2007B97E6 /* Addressbook */,
 				5145DBF01897732D007B97E6 /* DataSets */,
 				5145DBB918973A74007B97E6 /* Supporting Files */,
@@ -578,7 +578,7 @@
 				5145DC1A1897732D007B97E6 /* ACRandomNameSet.m in Sources */,
 				5145DC121897732D007B97E6 /* ACImageSet.m in Sources */,
 				5145DC101897732D007B97E6 /* ACPersonSet.m in Sources */,
-				5145DBBE18973A74007B97E6 /* Populate.m in Sources */,
+				5145DBBE18973A74007B97E6 /* ACPopulate.m in Sources */,
 				5145DC141897732D007B97E6 /* ACRandomColorImageSet.m in Sources */,
 				5145DC1D1897732D007B97E6 /* NSString+Randomized.m in Sources */,
 				5145DC1B1897732D007B97E6 /* NSCharacterSet+NSSet.m in Sources */,

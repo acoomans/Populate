@@ -35,14 +35,12 @@
                                                       phone:@"555-333-3333"
                                                       image:nil];
     
-    Populate *populate = [[Populate alloc] init];
     
-    [populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC] completion:nil];
+    [ACPopulate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC] completion:nil];
     
-    [populate depopulateGroupWithName:@"Test" completion:nil];
+    [ACPopulate depopulateGroupWithName:@"Test" completion:nil];
     
-    [populate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage] completion:nil];
-     
+    [ACPopulate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage] completion:nil];
     */
     
     

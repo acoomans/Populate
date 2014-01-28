@@ -54,15 +54,15 @@ To add custom-made contacts to the address book, create the contacts with the _A
                                                       phone:@"555-333-3333"
                                                       image:nil];
     
-    [populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC] completion:nil];
+    [ACPopulate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC] completion:nil];
     
 To add randomly-generated contacts instead, use a _ACPersonSet_:
     
-    [populate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage] completion:nil];
+    [ACPopulate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage] completion:nil];
 
 If you want to delete the _Test_ group and all its members:
 
-    [populate depopulateGroupWithName:@"Test" completion:nil];
+    [ACPopulate depopulateGroupWithName:@"Test" completion:nil];
 
 You can also have a look at the _Populate_ app for inspiration.
 

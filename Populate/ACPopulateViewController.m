@@ -21,12 +21,12 @@
     
     self.populateButton.enabled = NO;
     
-    [[[Populate alloc] init] populateGroupWithName:self.groupNameTextField.text
-                                withCountOfPersons:[self.countOfPersonsTextField.text integerValue]
-                                           fromSet:[ACPersonSet personSetWithRandomNameAndImage]
-                                        completion:^{
-                                            self.populateButton.enabled = YES;
-     }];
+    [ACPopulate populateGroupWithName:self.groupNameTextField.text
+                   withCountOfPersons:[self.countOfPersonsTextField.text integerValue]
+                              fromSet:[ACPersonSet personSetWithRandomNameAndImage]
+                           completion:^{
+                               self.populateButton.enabled = YES;
+                           }];
 }
 
 - (IBAction)depopulate:(id)sender {
@@ -55,7 +55,7 @@
         }
             
         case 1: {
-            [[[Populate alloc] init] depopulateGroupWithName:self.groupNameTextField.text completion:^{
+            [ACPopulate depopulateGroupWithName:self.groupNameTextField.text completion:^{
                 self.depopulateButton.enabled = YES;
             }];
             break;
@@ -69,7 +69,6 @@
 #pragma mark - ABPeoplePickerNavigationControllerDelegate
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
-    //[self dismissModalViewControllerAnimated:YES];
     return YES;
 }
 

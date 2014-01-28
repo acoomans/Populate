@@ -1,27 +1,27 @@
 //
-//  Populate.m
+//  ACPopulate.m
 //  PopulateKit
 //
 //  Created by Arnaud Coomans on 27/01/14.
 //  Copyright (c) 2014 Arnaud Coomans. All rights reserved.
 //
 
-#import "Populate.h"
+#import "ACPopulate.h"
 #import <AddressBook/AddressBook.h>
 #import "ACAddressBook.h"
 #import "ACPerson.h"
 #import "ACPersonSet.h"
 
-@implementation Populate
+@implementation ACPopulate
 
-- (void)populateGroupWithName:(NSString*)groupName
++ (void)populateGroupWithName:(NSString*)groupName
            withCountOfPersons:(NSUInteger)countOfPersons
                       fromSet:(ACPersonSet*)personSet
                    completion:(void (^)(void))block {
     [self populateGroupWithName:groupName withCountOfPersons:countOfPersons fromSets:@[personSet] completion:block];
 }
 
-- (void)populateGroupWithName:(NSString*)groupName
++ (void)populateGroupWithName:(NSString*)groupName
            withCountOfPersons:(NSUInteger)countOfPersons
                      fromSets:(NSArray*)arrayOfPersonSets
                    completion:(void (^)(void))block {
@@ -36,7 +36,7 @@
     [self populateGroupWithName:groupName withPersons:arrayOfPersons completion:block];
 }
 
-- (void)populateGroupWithName:(NSString*)groupName withPersons:(NSArray*)arrayOfPersons completion:(void (^)(void))block {
++ (void)populateGroupWithName:(NSString*)groupName withPersons:(NSArray*)arrayOfPersons completion:(void (^)(void))block {
     
     CFErrorRef error = NULL;
     
@@ -76,7 +76,7 @@
     });
 }
 
-- (void)depopulateGroupWithName:(NSString*)groupName completion:(void (^)(void))block {
++ (void)depopulateGroupWithName:(NSString*)groupName completion:(void (^)(void))block {
     
     CFErrorRef error = NULL;
     
