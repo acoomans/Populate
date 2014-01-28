@@ -21,6 +21,15 @@
 		5145DB9F1897392F007B97E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB811897392F007B97E6 /* UIKit.framework */; };
 		5145DBA71897392F007B97E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5145DBA51897392F007B97E6 /* InfoPlist.strings */; };
 		5145DBA91897392F007B97E6 /* PopulateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBA81897392F007B97E6 /* PopulateTests.m */; };
+		5145DBB718973A74007B97E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB7D1897392F007B97E6 /* Foundation.framework */; };
+		5145DBBC18973A74007B97E6 /* PopulateKit.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5145DBBB18973A74007B97E6 /* PopulateKit.h */; };
+		5145DBBE18973A74007B97E6 /* PopulateKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBBD18973A74007B97E6 /* PopulateKit.m */; };
+		5145DBC418973A74007B97E6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB9C1897392F007B97E6 /* XCTest.framework */; };
+		5145DBC518973A74007B97E6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB7D1897392F007B97E6 /* Foundation.framework */; };
+		5145DBC618973A74007B97E6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DB811897392F007B97E6 /* UIKit.framework */; };
+		5145DBC918973A74007B97E6 /* libPopulateKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DBB618973A74007B97E6 /* libPopulateKit.a */; };
+		5145DBCF18973A74007B97E6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5145DBCD18973A74007B97E6 /* InfoPlist.strings */; };
+		5145DBD118973A74007B97E6 /* PopulateKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBD018973A74007B97E6 /* PopulateKitTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +40,27 @@
 			remoteGlobalIDString = 5145DB791897392F007B97E6;
 			remoteInfo = Populate;
 		};
+		5145DBC718973A74007B97E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5145DB721897392F007B97E6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5145DBB518973A74007B97E6;
+			remoteInfo = PopulateKit;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5145DBB418973A74007B97E6 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				5145DBBC18973A74007B97E6 /* PopulateKit.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5145DB7A1897392F007B97E6 /* Populate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Populate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +82,14 @@
 		5145DBA41897392F007B97E6 /* PopulateTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopulateTests-Info.plist"; sourceTree = "<group>"; };
 		5145DBA61897392F007B97E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5145DBA81897392F007B97E6 /* PopulateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopulateTests.m; sourceTree = "<group>"; };
+		5145DBB618973A74007B97E6 /* libPopulateKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPopulateKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5145DBBA18973A74007B97E6 /* PopulateKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PopulateKit-Prefix.pch"; sourceTree = "<group>"; };
+		5145DBBB18973A74007B97E6 /* PopulateKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopulateKit.h; sourceTree = "<group>"; };
+		5145DBBD18973A74007B97E6 /* PopulateKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopulateKit.m; sourceTree = "<group>"; };
+		5145DBC318973A74007B97E6 /* PopulateKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopulateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5145DBCC18973A74007B97E6 /* PopulateKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PopulateKitTests-Info.plist"; sourceTree = "<group>"; };
+		5145DBCE18973A74007B97E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5145DBD018973A74007B97E6 /* PopulateKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopulateKitTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +113,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5145DBB318973A74007B97E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5145DBB718973A74007B97E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5145DBC018973A74007B97E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5145DBC918973A74007B97E6 /* libPopulateKit.a in Frameworks */,
+				5145DBC418973A74007B97E6 /* XCTest.framework in Frameworks */,
+				5145DBC618973A74007B97E6 /* UIKit.framework in Frameworks */,
+				5145DBC518973A74007B97E6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +140,8 @@
 			children = (
 				5145DB831897392F007B97E6 /* Populate */,
 				5145DBA21897392F007B97E6 /* PopulateTests */,
+				5145DBB818973A74007B97E6 /* PopulateKit */,
+				5145DBCA18973A74007B97E6 /* PopulateKitTests */,
 				5145DB7C1897392F007B97E6 /* Frameworks */,
 				5145DB7B1897392F007B97E6 /* Products */,
 			);
@@ -94,6 +152,8 @@
 			children = (
 				5145DB7A1897392F007B97E6 /* Populate.app */,
 				5145DB9B1897392F007B97E6 /* PopulateTests.xctest */,
+				5145DBB618973A74007B97E6 /* libPopulateKit.a */,
+				5145DBC318973A74007B97E6 /* PopulateKitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +212,42 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5145DBB818973A74007B97E6 /* PopulateKit */ = {
+			isa = PBXGroup;
+			children = (
+				5145DBBB18973A74007B97E6 /* PopulateKit.h */,
+				5145DBBD18973A74007B97E6 /* PopulateKit.m */,
+				5145DBB918973A74007B97E6 /* Supporting Files */,
+			);
+			path = PopulateKit;
+			sourceTree = "<group>";
+		};
+		5145DBB918973A74007B97E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5145DBBA18973A74007B97E6 /* PopulateKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5145DBCA18973A74007B97E6 /* PopulateKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				5145DBD018973A74007B97E6 /* PopulateKitTests.m */,
+				5145DBCB18973A74007B97E6 /* Supporting Files */,
+			);
+			path = PopulateKitTests;
+			sourceTree = "<group>";
+		};
+		5145DBCB18973A74007B97E6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5145DBCC18973A74007B97E6 /* PopulateKitTests-Info.plist */,
+				5145DBCD18973A74007B97E6 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,6 +286,41 @@
 			productReference = 5145DB9B1897392F007B97E6 /* PopulateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		5145DBB518973A74007B97E6 /* PopulateKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5145DBD218973A74007B97E6 /* Build configuration list for PBXNativeTarget "PopulateKit" */;
+			buildPhases = (
+				5145DBB218973A74007B97E6 /* Sources */,
+				5145DBB318973A74007B97E6 /* Frameworks */,
+				5145DBB418973A74007B97E6 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopulateKit;
+			productName = PopulateKit;
+			productReference = 5145DBB618973A74007B97E6 /* libPopulateKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		5145DBC218973A74007B97E6 /* PopulateKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5145DBD518973A74007B97E6 /* Build configuration list for PBXNativeTarget "PopulateKitTests" */;
+			buildPhases = (
+				5145DBBF18973A74007B97E6 /* Sources */,
+				5145DBC018973A74007B97E6 /* Frameworks */,
+				5145DBC118973A74007B97E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5145DBC818973A74007B97E6 /* PBXTargetDependency */,
+			);
+			name = PopulateKitTests;
+			productName = PopulateKitTests;
+			productReference = 5145DBC318973A74007B97E6 /* PopulateKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +333,9 @@
 				TargetAttributes = {
 					5145DB9A1897392F007B97E6 = {
 						TestTargetID = 5145DB791897392F007B97E6;
+					};
+					5145DBC218973A74007B97E6 = {
+						TestTargetID = 5145DBB518973A74007B97E6;
 					};
 				};
 			};
@@ -220,6 +354,8 @@
 			targets = (
 				5145DB791897392F007B97E6 /* Populate */,
 				5145DB9A1897392F007B97E6 /* PopulateTests */,
+				5145DBB518973A74007B97E6 /* PopulateKit */,
+				5145DBC218973A74007B97E6 /* PopulateKitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -240,6 +376,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5145DBA71897392F007B97E6 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5145DBC118973A74007B97E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5145DBCF18973A74007B97E6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +408,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5145DBB218973A74007B97E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5145DBBE18973A74007B97E6 /* PopulateKit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5145DBBF18973A74007B97E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5145DBD118973A74007B97E6 /* PopulateKitTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -271,6 +431,11 @@
 			isa = PBXTargetDependency;
 			target = 5145DB791897392F007B97E6 /* Populate */;
 			targetProxy = 5145DBA01897392F007B97E6 /* PBXContainerItemProxy */;
+		};
+		5145DBC818973A74007B97E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5145DBB518973A74007B97E6 /* PopulateKit */;
+			targetProxy = 5145DBC718973A74007B97E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -295,6 +460,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				5145DBA61897392F007B97E6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5145DBCD18973A74007B97E6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5145DBCE18973A74007B97E6 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -442,6 +615,74 @@
 			};
 			name = Release;
 		};
+		5145DBD318973A74007B97E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/PopulateKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PopulateKit/PopulateKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5145DBD418973A74007B97E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				DSTROOT = /tmp/PopulateKit.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PopulateKit/PopulateKit-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5145DBD618973A74007B97E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PopulateKit/PopulateKit-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PopulateKitTests/PopulateKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5145DBD718973A74007B97E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PopulateKit/PopulateKit-Prefix.pch";
+				INFOPLIST_FILE = "PopulateKitTests/PopulateKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,6 +708,22 @@
 			buildConfigurations = (
 				5145DBB01897392F007B97E6 /* Debug */,
 				5145DBB11897392F007B97E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5145DBD218973A74007B97E6 /* Build configuration list for PBXNativeTarget "PopulateKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5145DBD318973A74007B97E6 /* Debug */,
+				5145DBD418973A74007B97E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5145DBD518973A74007B97E6 /* Build configuration list for PBXNativeTarget "PopulateKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5145DBD618973A74007B97E6 /* Debug */,
+				5145DBD718973A74007B97E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
