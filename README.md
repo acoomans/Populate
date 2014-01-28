@@ -27,7 +27,7 @@ You can either clone this repository and add the files in the _PopulateKit_ dire
 
 Add a pod entry to your Podfile:
 
-    pod 'PopulateKit', '~> 0.0.1'
+    pod 'PopulateKit', '~> 0.0.2'
 
 Install the pod(s) by running:
 

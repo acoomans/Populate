@@ -19,6 +19,10 @@
  */
 + (instancetype)randomNameSet;
 
+/** A set of common surnames.
+ */
++ (instancetype)commonSurnameSet;
+
 /** Returns a random name.
  * @discussion the default implementation returns nil.
  */

@@ -51,6 +51,9 @@
 		5145DC3D189775DC007B97E6 /* NSString_RandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC37189775DC007B97E6 /* NSString_RandomTests.m */; };
 		51DE649D1897992200CA6E79 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE649C1897992200CA6E79 /* AddressBook.framework */; };
 		51DE64E71897A57600CA6E79 /* ACIdenticonImageSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE64E61897A57600CA6E79 /* ACIdenticonImageSet.m */; };
+		51DE64EA1897A90A00CA6E79 /* ACCommonSurnameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE64E91897A90A00CA6E79 /* ACCommonSurnameSet.m */; };
+		51DE64EC1897ABE700CA6E79 /* PopulateKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51DE64EB1897ABE700CA6E79 /* PopulateKit.bundle */; };
+		51DE64ED1897AD8500CA6E79 /* PopulateKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 51DE64EB1897ABE700CA6E79 /* PopulateKit.bundle */; };
 		BEDF3723686F4758B8047FD3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7F917AEE640FF86C42E62 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +149,9 @@
 		51DE649C1897992200CA6E79 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		51DE64E51897A57600CA6E79 /* ACIdenticonImageSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACIdenticonImageSet.h; sourceTree = "<group>"; };
 		51DE64E61897A57600CA6E79 /* ACIdenticonImageSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACIdenticonImageSet.m; sourceTree = "<group>"; };
+		51DE64E81897A90A00CA6E79 /* ACCommonSurnameSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACCommonSurnameSet.h; sourceTree = "<group>"; };
+		51DE64E91897A90A00CA6E79 /* ACCommonSurnameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACCommonSurnameSet.m; sourceTree = "<group>"; };
+		51DE64EB1897ABE700CA6E79 /* PopulateKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PopulateKit.bundle; sourceTree = "<group>"; };
 		81A7F917AEE640FF86C42E62 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -284,6 +290,7 @@
 				5145DBBD18973A74007B97E6 /* ACPopulate.m */,
 				5145DBE8189753F2007B97E6 /* Addressbook */,
 				5145DBF01897732D007B97E6 /* DataSets */,
+				51DE64EB1897ABE700CA6E79 /* PopulateKit.bundle */,
 				5145DBB918973A74007B97E6 /* Supporting Files */,
 			);
 			path = PopulateKit;
@@ -366,6 +373,8 @@
 				5145DC0E1897732D007B97E6 /* NSString+Randomized.m */,
 				5145DC0B1897732D007B97E6 /* NSString+Random.h */,
 				5145DC0C1897732D007B97E6 /* NSString+Random.m */,
+				51DE64E81897A90A00CA6E79 /* ACCommonSurnameSet.h */,
+				51DE64E91897A90A00CA6E79 /* ACCommonSurnameSet.m */,
 			);
 			path = Name;
 			sourceTree = "<group>";
@@ -537,6 +546,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE64EC1897ABE700CA6E79 /* PopulateKit.bundle in Resources */,
 				5145DB961897392F007B97E6 /* Images.xcassets in Resources */,
 				5145DB881897392F007B97E6 /* InfoPlist.strings in Resources */,
 				5145DB911897392F007B97E6 /* Main.storyboard in Resources */,
@@ -555,6 +565,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51DE64ED1897AD8500CA6E79 /* PopulateKit.bundle in Resources */,
 				5145DBCF18973A74007B97E6 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,6 +630,7 @@
 			files = (
 				5145DC1C1897732D007B97E6 /* NSString+Random.m in Sources */,
 				5145DBEE189753F2007B97E6 /* ACPerson.m in Sources */,
+				51DE64EA1897A90A00CA6E79 /* ACCommonSurnameSet.m in Sources */,
 				5145DC161897732D007B97E6 /* ACNameSet.m in Sources */,
 				5145DC151897732D007B97E6 /* UIImage+Random.m in Sources */,
 				5145DC1A1897732D007B97E6 /* ACRandomNameSet.m in Sources */,

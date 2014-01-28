@@ -8,6 +8,7 @@
 
 #import "ACNameSet.h"
 #import "ACRandomNameSet.h"
+#import "ACCommonSurnameSet.h"
 
 @implementation ACNameSet
 
@@ -16,6 +17,15 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _set = [[ACRandomNameSet alloc] init];
+    });
+    return _set;
+}
+
++ (instancetype)commonSurnameSet {
+    static ACCommonSurnameSet *_set = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _set = [[ACCommonSurnameSet alloc] init];
     });
     return _set;
 }
