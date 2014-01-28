@@ -72,7 +72,7 @@
         }
         CFRelease(addressBookRef);
         
-        block();
+        if (block) block();
     });
 }
 
@@ -105,7 +105,7 @@
         }
         CFRelease(addressBookRef);
         
-        block();
+        if (block) block();
     });
 }
 
