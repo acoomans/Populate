@@ -25,7 +25,7 @@
 - (IBAction)depopulate:(id)sender {
     
     [[[UIAlertView alloc] initWithTitle:@"Depopulate"
-                                  message:[NSString stringWithFormat:@"Remove group \"%@\" and all its contacts?", self.groupNameTextField]
+                                  message:[NSString stringWithFormat:@"Remove group \"%@\" and all its contacts?", self.groupNameTextField.text]
                                  delegate:self
                         cancelButtonTitle:@"Cancel"
                         otherButtonTitles:@"Ok", nil] show];
