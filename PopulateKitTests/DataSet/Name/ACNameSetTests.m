@@ -51,6 +51,46 @@
     NSLog(@"b = %@", b);
 }
 
+#pragma mark - ACCommonMaleSet
+
+- (void)testCommonMaleNameSet {
+    NSString *name = [[ACNameSet commonMaleNameSet] randomName];
+    XCTAssertTrue([name length] > 0);
+    NSLog(@"%@", name);
+}
+
+- (void)testCommonMaleNameSetCount {
+    XCTAssertTrue([[ACNameSet commonMaleNameSet] count] > 0);
+}
+
+- (void)testDifferentCommonMaleNameSet {
+    NSString *a = [[ACNameSet commonMaleNameSet] randomName];
+    NSString *b = [[ACNameSet commonMaleNameSet] randomName];
+    XCTAssertFalse([a isEqualToString:b]);
+    NSLog(@"a = %@", a);
+    NSLog(@"b = %@", b);
+}
+
+#pragma mark - ACCommonFemaleSet
+
+- (void)testCommonFemaleNameSet {
+    NSString *name = [[ACNameSet commonFemaleNameSet] randomName];
+    XCTAssertTrue([name length] > 0);
+    NSLog(@"%@", name);
+}
+
+- (void)testCommonFemaleNameSetCount {
+    XCTAssertTrue([[ACNameSet commonFemaleNameSet] count] > 0);
+}
+
+- (void)testDifferentCommonFemaleNameSet {
+    NSString *a = [[ACNameSet commonFemaleNameSet] randomName];
+    NSString *b = [[ACNameSet commonFemaleNameSet] randomName];
+    XCTAssertFalse([a isEqualToString:b]);
+    NSLog(@"a = %@", a);
+    NSLog(@"b = %@", b);
+}
+
 
 
 @end

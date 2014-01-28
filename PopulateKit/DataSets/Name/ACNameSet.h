@@ -23,6 +23,15 @@
  */
 + (instancetype)commonSurnameSet;
 
+/** A set of common male names.
+ */
++ (instancetype)commonMaleNameSet;
+
+/** A set of common female names.
+ */
++ (instancetype)commonFemaleNameSet;
+
+
 /** Returns a random name.
  * @discussion the default implementation returns nil.
  */

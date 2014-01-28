@@ -1,27 +1,28 @@
 //
-//  ACPopularSurnameSet.m
+//  ACCommonMaleNameSet.m
 //  Populate
 //
-//  Created by Arnaud Coomans on 26/01/14.
+//  Created by Arnaud Coomans on 28/01/14.
 //  Copyright (c) 2014 Arnaud Coomans. All rights reserved.
 //
 
-#import "ACCommonSurnameSet.h"
+#import "ACCommonMaleNameSet.h"
 
-static NSString * const ACCommonSurnameSetResourceName = @"PopulateKit.bundle/common_surnames";
+static NSString * const ACCommonMaleNameSetResourceName = @"PopulateKit.bundle/common_male_names";
 
-@interface ACCommonSurnameSet ()
+@interface ACCommonMaleNameSet ()
 - (NSArray*)names;
 @end
 
-@implementation ACCommonSurnameSet
+
+@implementation ACCommonMaleNameSet
 
 - (NSArray*)names {
     static NSArray *_names = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSString* fileRoot = [[NSBundle mainBundle] pathForResource:ACCommonSurnameSetResourceName ofType:@"csv"];
+        NSString* fileRoot = [[NSBundle mainBundle] pathForResource:ACCommonMaleNameSetResourceName ofType:@"csv"];
         NSString* fileContents = [NSString stringWithContentsOfFile:fileRoot encoding:NSUTF8StringEncoding error:nil];
         _names = [fileContents componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     });
