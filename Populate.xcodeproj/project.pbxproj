@@ -34,6 +34,21 @@
 		5145DBE718973CD3007B97E6 /* libPopulateKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5145DBB618973A74007B97E6 /* libPopulateKit.a */; };
 		5145DBED189753F2007B97E6 /* ACAddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBEA189753F2007B97E6 /* ACAddressBook.m */; };
 		5145DBEE189753F2007B97E6 /* ACPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBEC189753F2007B97E6 /* ACPerson.m */; };
+		5145DC101897732D007B97E6 /* ACPersonSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBF21897732D007B97E6 /* ACPersonSet.m */; };
+		5145DC121897732D007B97E6 /* ACImageSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBF71897732D007B97E6 /* ACImageSet.m */; };
+		5145DC141897732D007B97E6 /* ACRandomColorImageSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBFB1897732D007B97E6 /* ACRandomColorImageSet.m */; };
+		5145DC151897732D007B97E6 /* UIImage+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DBFD1897732D007B97E6 /* UIImage+Random.m */; };
+		5145DC161897732D007B97E6 /* ACNameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC001897732D007B97E6 /* ACNameSet.m */; };
+		5145DC1A1897732D007B97E6 /* ACRandomNameSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC081897732D007B97E6 /* ACRandomNameSet.m */; };
+		5145DC1B1897732D007B97E6 /* NSCharacterSet+NSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC0A1897732D007B97E6 /* NSCharacterSet+NSSet.m */; };
+		5145DC1C1897732D007B97E6 /* NSString+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC0C1897732D007B97E6 /* NSString+Random.m */; };
+		5145DC1D1897732D007B97E6 /* NSString+Randomized.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC0E1897732D007B97E6 /* NSString+Randomized.m */; };
+		5145DC38189775DC007B97E6 /* ACPersonSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC2F189775DC007B97E6 /* ACPersonSetTests.m */; };
+		5145DC39189775DC007B97E6 /* ACImageSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC31189775DC007B97E6 /* ACImageSetTests.m */; };
+		5145DC3A189775DC007B97E6 /* UIImage+pixelColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC33189775DC007B97E6 /* UIImage+pixelColor.m */; };
+		5145DC3B189775DC007B97E6 /* ACNameSetTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC35189775DC007B97E6 /* ACNameSetTests.m */; };
+		5145DC3C189775DC007B97E6 /* NSCharacterSet_NSSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC36189775DC007B97E6 /* NSCharacterSet_NSSetTest.m */; };
+		5145DC3D189775DC007B97E6 /* NSString_RandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC37189775DC007B97E6 /* NSString_RandomTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +114,31 @@
 		5145DBEB189753F2007B97E6 /* ACPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPerson.h; sourceTree = "<group>"; };
 		5145DBEC189753F2007B97E6 /* ACPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPerson.m; sourceTree = "<group>"; };
 		5145DBEF189755EE007B97E6 /* PopulateKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopulateKit.h; sourceTree = "<group>"; };
+		5145DBF11897732D007B97E6 /* ACPersonSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACPersonSet.h; sourceTree = "<group>"; };
+		5145DBF21897732D007B97E6 /* ACPersonSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPersonSet.m; sourceTree = "<group>"; };
+		5145DBF61897732D007B97E6 /* ACImageSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACImageSet.h; sourceTree = "<group>"; };
+		5145DBF71897732D007B97E6 /* ACImageSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACImageSet.m; sourceTree = "<group>"; };
+		5145DBFA1897732D007B97E6 /* ACRandomColorImageSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACRandomColorImageSet.h; sourceTree = "<group>"; };
+		5145DBFB1897732D007B97E6 /* ACRandomColorImageSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACRandomColorImageSet.m; sourceTree = "<group>"; };
+		5145DBFC1897732D007B97E6 /* UIImage+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Random.h"; sourceTree = "<group>"; };
+		5145DBFD1897732D007B97E6 /* UIImage+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Random.m"; sourceTree = "<group>"; };
+		5145DBFF1897732D007B97E6 /* ACNameSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACNameSet.h; sourceTree = "<group>"; };
+		5145DC001897732D007B97E6 /* ACNameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACNameSet.m; sourceTree = "<group>"; };
+		5145DC071897732D007B97E6 /* ACRandomNameSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACRandomNameSet.h; sourceTree = "<group>"; };
+		5145DC081897732D007B97E6 /* ACRandomNameSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACRandomNameSet.m; sourceTree = "<group>"; };
+		5145DC091897732D007B97E6 /* NSCharacterSet+NSSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+NSSet.h"; sourceTree = "<group>"; };
+		5145DC0A1897732D007B97E6 /* NSCharacterSet+NSSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+NSSet.m"; sourceTree = "<group>"; };
+		5145DC0B1897732D007B97E6 /* NSString+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Random.h"; sourceTree = "<group>"; };
+		5145DC0C1897732D007B97E6 /* NSString+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Random.m"; sourceTree = "<group>"; };
+		5145DC0D1897732D007B97E6 /* NSString+Randomized.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Randomized.h"; sourceTree = "<group>"; };
+		5145DC0E1897732D007B97E6 /* NSString+Randomized.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Randomized.m"; sourceTree = "<group>"; };
+		5145DC2F189775DC007B97E6 /* ACPersonSetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACPersonSetTests.m; sourceTree = "<group>"; };
+		5145DC31189775DC007B97E6 /* ACImageSetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACImageSetTests.m; sourceTree = "<group>"; };
+		5145DC32189775DC007B97E6 /* UIImage+pixelColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+pixelColor.h"; sourceTree = "<group>"; };
+		5145DC33189775DC007B97E6 /* UIImage+pixelColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+pixelColor.m"; sourceTree = "<group>"; };
+		5145DC35189775DC007B97E6 /* ACNameSetTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACNameSetTests.m; sourceTree = "<group>"; };
+		5145DC36189775DC007B97E6 /* NSCharacterSet_NSSetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_NSSetTest.m; sourceTree = "<group>"; };
+		5145DC37189775DC007B97E6 /* NSString_RandomTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_RandomTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +270,7 @@
 				5145DBBB18973A74007B97E6 /* Populate.h */,
 				5145DBBD18973A74007B97E6 /* Populate.m */,
 				5145DBE8189753F2007B97E6 /* Addressbook */,
+				5145DBF01897732D007B97E6 /* DataSets */,
 				5145DBB918973A74007B97E6 /* Supporting Files */,
 			);
 			path = PopulateKit;
@@ -247,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				5145DBD018973A74007B97E6 /* PopulateKitTests.m */,
+				5145DC2E189775DC007B97E6 /* DataSet */,
 				5145DBCB18973A74007B97E6 /* Supporting Files */,
 			);
 			path = PopulateKitTests;
@@ -270,6 +312,77 @@
 				5145DBEC189753F2007B97E6 /* ACPerson.m */,
 			);
 			path = Addressbook;
+			sourceTree = "<group>";
+		};
+		5145DBF01897732D007B97E6 /* DataSets */ = {
+			isa = PBXGroup;
+			children = (
+				5145DBF11897732D007B97E6 /* ACPersonSet.h */,
+				5145DBF21897732D007B97E6 /* ACPersonSet.m */,
+				5145DBFE1897732D007B97E6 /* Name */,
+				5145DBF31897732D007B97E6 /* Image */,
+			);
+			path = DataSets;
+			sourceTree = "<group>";
+		};
+		5145DBF31897732D007B97E6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5145DBF61897732D007B97E6 /* ACImageSet.h */,
+				5145DBF71897732D007B97E6 /* ACImageSet.m */,
+				5145DBFA1897732D007B97E6 /* ACRandomColorImageSet.h */,
+				5145DBFB1897732D007B97E6 /* ACRandomColorImageSet.m */,
+				5145DBFC1897732D007B97E6 /* UIImage+Random.h */,
+				5145DBFD1897732D007B97E6 /* UIImage+Random.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		5145DBFE1897732D007B97E6 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				5145DBFF1897732D007B97E6 /* ACNameSet.h */,
+				5145DC001897732D007B97E6 /* ACNameSet.m */,
+				5145DC071897732D007B97E6 /* ACRandomNameSet.h */,
+				5145DC081897732D007B97E6 /* ACRandomNameSet.m */,
+				5145DC091897732D007B97E6 /* NSCharacterSet+NSSet.h */,
+				5145DC0A1897732D007B97E6 /* NSCharacterSet+NSSet.m */,
+				5145DC0D1897732D007B97E6 /* NSString+Randomized.h */,
+				5145DC0E1897732D007B97E6 /* NSString+Randomized.m */,
+				5145DC0B1897732D007B97E6 /* NSString+Random.h */,
+				5145DC0C1897732D007B97E6 /* NSString+Random.m */,
+			);
+			path = Name;
+			sourceTree = "<group>";
+		};
+		5145DC2E189775DC007B97E6 /* DataSet */ = {
+			isa = PBXGroup;
+			children = (
+				5145DC2F189775DC007B97E6 /* ACPersonSetTests.m */,
+				5145DC30189775DC007B97E6 /* Image */,
+				5145DC34189775DC007B97E6 /* Name */,
+			);
+			path = DataSet;
+			sourceTree = "<group>";
+		};
+		5145DC30189775DC007B97E6 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5145DC31189775DC007B97E6 /* ACImageSetTests.m */,
+				5145DC32189775DC007B97E6 /* UIImage+pixelColor.h */,
+				5145DC33189775DC007B97E6 /* UIImage+pixelColor.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		5145DC34189775DC007B97E6 /* Name */ = {
+			isa = PBXGroup;
+			children = (
+				5145DC35189775DC007B97E6 /* ACNameSetTests.m */,
+				5145DC36189775DC007B97E6 /* NSCharacterSet_NSSetTest.m */,
+				5145DC37189775DC007B97E6 /* NSString_RandomTests.m */,
+			);
+			path = Name;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,8 +549,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5145DC1C1897732D007B97E6 /* NSString+Random.m in Sources */,
 				5145DBEE189753F2007B97E6 /* ACPerson.m in Sources */,
+				5145DC161897732D007B97E6 /* ACNameSet.m in Sources */,
+				5145DC151897732D007B97E6 /* UIImage+Random.m in Sources */,
+				5145DC1A1897732D007B97E6 /* ACRandomNameSet.m in Sources */,
+				5145DC121897732D007B97E6 /* ACImageSet.m in Sources */,
+				5145DC101897732D007B97E6 /* ACPersonSet.m in Sources */,
 				5145DBBE18973A74007B97E6 /* Populate.m in Sources */,
+				5145DC141897732D007B97E6 /* ACRandomColorImageSet.m in Sources */,
+				5145DC1D1897732D007B97E6 /* NSString+Randomized.m in Sources */,
+				5145DC1B1897732D007B97E6 /* NSCharacterSet+NSSet.m in Sources */,
 				5145DBED189753F2007B97E6 /* ACAddressBook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +568,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5145DC3D189775DC007B97E6 /* NSString_RandomTests.m in Sources */,
+				5145DC3A189775DC007B97E6 /* UIImage+pixelColor.m in Sources */,
+				5145DC39189775DC007B97E6 /* ACImageSetTests.m in Sources */,
+				5145DC3B189775DC007B97E6 /* ACNameSetTests.m in Sources */,
 				5145DBD118973A74007B97E6 /* PopulateKitTests.m in Sources */,
+				5145DC38189775DC007B97E6 /* ACPersonSetTests.m in Sources */,
+				5145DC3C189775DC007B97E6 /* NSCharacterSet_NSSetTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +709,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Populate/Populate-Prefix.pch";
 				INFOPLIST_FILE = "Populate/Populate-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -594,6 +723,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Populate/Populate-Prefix.pch";
 				INFOPLIST_FILE = "Populate/Populate-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -687,6 +817,12 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "PopulateKitTests/PopulateKitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -704,6 +840,12 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PopulateKit/PopulateKit-Prefix.pch";
 				INFOPLIST_FILE = "PopulateKitTests/PopulateKitTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
 			};

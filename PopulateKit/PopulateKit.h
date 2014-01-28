@@ -8,3 +8,7 @@
 
 #import "Populate.h"
 #import "ACPerson.h"
+#import "ACPersonSet.h"
+
+#import "ACNameSet.h"
+#import "ACImageSet.h"

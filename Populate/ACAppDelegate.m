@@ -34,8 +34,10 @@
     
     Populate *populate = [[Populate alloc] init];
     
-    [populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC]];
+    //[populate populateGroupWithName:@"Test" withPersons:@[personA, personB, personC]];
     //[populate depopulateGroupWithName:@"Test"];
+    
+    [populate populateGroupWithName:@"Test" withCountOfPersons:10 fromSet:[ACPersonSet personSetWithRandomNameAndImage]];
     
     return YES;
 }

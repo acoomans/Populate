@@ -10,6 +10,7 @@
 #import <AddressBook/AddressBook.h>
 #import "ACAddressBook.h"
 #import "ACPerson.h"
+#import "ACPersonSet.h"
 
 @implementation Populate
 
@@ -22,7 +23,15 @@
 - (void)populateGroupWithName:(NSString*)groupName
            withCountOfPersons:(NSUInteger)countOfPersons
                      fromSets:(NSArray*)arrayOfPersonSets {
-    //TODO: implement populateGroupWithName:withCountOfPersons:fromSets:
+    
+    NSMutableArray *arrayOfPersons = [NSMutableArray arrayWithCapacity:countOfPersons];
+    
+    for (int i=countOfPersons; i>0; i--) {
+        ACPersonSet *personSet = arrayOfPersonSets[arc4random_uniform(arrayOfPersonSets.count)];
+        [arrayOfPersons addObject:[personSet randomPerson]];
+    }
+    
+    [self populateGroupWithName:groupName withPersons:arrayOfPersons];
 }
 
 - (void)populateGroupWithName:(NSString*)groupName withPersons:(NSArray*)arrayOfPersons {
