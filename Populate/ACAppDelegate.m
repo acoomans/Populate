@@ -16,9 +16,7 @@
 {
     // Override point for customization after application launch.
     
-    
     /*
-    
     ACPerson *personA = [[ACPerson alloc] initWithFirstname:@"Alice"
                                                    lastName:@"A"
                                                       email:@"alice@example.com"
