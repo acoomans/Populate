@@ -8,10 +8,14 @@
 
 #import "ACImageSet.h"
 
+
+/** ACIdenticonImageSet is a set of [identicon](https://en.wikipedia.org/wiki/Identicon) images.
+ */
+
 @interface ACIdenticonImageSet : ACImageSet
 
 /** Returns a random image.
- * @return An [identicon](https://en.wikipedia.org/wiki/Identicon).
+ * @return An identicon.
  */
 - (UIImage*)randomImage;
 

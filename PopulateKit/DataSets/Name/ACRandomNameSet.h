@@ -8,6 +8,10 @@
 
 #import "ACNameSet.h"
 
+
+/** ACRandomNameSet is a set of random string of length 8 characters.
+ */
+
 @interface ACRandomNameSet : ACNameSet
 
 /** Returns a random name.

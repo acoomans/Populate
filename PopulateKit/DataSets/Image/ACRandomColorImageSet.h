@@ -8,6 +8,10 @@
 
 #import "ACImageSet.h"
 
+
+/** ACRandomColorImageSet is a set of one-color images.
+ */
+
 @interface ACRandomColorImageSet : ACImageSet
 
 /** Returns a random image.
