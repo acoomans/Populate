@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface ACPopulateViewController : UIViewController <UIAlertViewDelegate>
+@interface ACPopulateViewController : UIViewController <UIAlertViewDelegate, ABPeoplePickerNavigationControllerDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *groupNameTextField;
 @property (nonatomic, weak) IBOutlet UITextField *countOfPersonsTextField;

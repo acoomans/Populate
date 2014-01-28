@@ -14,6 +14,7 @@
 
 @implementation ACPopulateViewController
 
+
 #pragma mark - actions
 
 - (IBAction)populate:(id)sender {
@@ -29,6 +30,12 @@
                                  delegate:self
                         cancelButtonTitle:@"Cancel"
                         otherButtonTitles:@"Ok", nil] show];
+}
+
+- (IBAction)contacts:(id)sender {
+    ABPeoplePickerNavigationController *peoplePickerNavigationController = [[ABPeoplePickerNavigationController alloc] init];
+    peoplePickerNavigationController.peoplePickerDelegate = self;
+    [self presentViewController:peoplePickerNavigationController animated:YES completion:nil];
 }
 
 
@@ -48,5 +55,24 @@
             break;
     }
 }
+
+#pragma mark - ABPeoplePickerNavigationControllerDelegate
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person {
+    //[self dismissModalViewControllerAnimated:YES];
+    return YES;
+}
+
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker
+      shouldContinueAfterSelectingPerson:(ABRecordRef)person
+                                property:(ABPropertyID)property
+                              identifier:(ABMultiValueIdentifier)identifier {
+    return YES;
+}
+
+- (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 
 @end
