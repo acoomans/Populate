@@ -14,6 +14,7 @@ Populate is both an iOS app and library to easily create random-generated contac
 ## Screenshots
 
 ![screenshot01](https://github.com/acoomans/Populate/raw/master/Screenshots/screenshot01.png)
+&nbsp;&nbsp;
 ![screenshot02](https://github.com/acoomans/Populate/raw/master/Screenshots/screenshot02.png)
 
 
