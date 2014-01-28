@@ -20,6 +20,10 @@
  */
 + (instancetype)randomColorImageSet;
 
+/** A set of identicon.
+ */
++ (instancetype)identiconImageSet;
+
 /** Returns a random image
  * @discussion the default implementation returns nil.
  */

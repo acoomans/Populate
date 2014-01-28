@@ -23,7 +23,9 @@
     
     [ACPopulate populateGroupWithName:self.groupNameTextField.text
                    withCountOfPersons:[self.countOfPersonsTextField.text integerValue]
-                              fromSet:[ACPersonSet personSetWithRandomNameAndImage]
+                              fromSet:[[ACPersonSet alloc] initWithFirstNameSet:[ACNameSet randomNameSet]
+                                                                    lastNameSet:[ACNameSet randomNameSet]
+                                                                       imageSet:[ACImageSet identiconImageSet]]
                            completion:^{
                                self.populateButton.enabled = YES;
                            }];

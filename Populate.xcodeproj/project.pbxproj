@@ -50,6 +50,8 @@
 		5145DC3C189775DC007B97E6 /* NSCharacterSet_NSSetTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC36189775DC007B97E6 /* NSCharacterSet_NSSetTest.m */; };
 		5145DC3D189775DC007B97E6 /* NSString_RandomTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5145DC37189775DC007B97E6 /* NSString_RandomTests.m */; };
 		51DE649D1897992200CA6E79 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51DE649C1897992200CA6E79 /* AddressBook.framework */; };
+		51DE64E71897A57600CA6E79 /* ACIdenticonImageSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DE64E61897A57600CA6E79 /* ACIdenticonImageSet.m */; };
+		BEDF3723686F4758B8047FD3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A7F917AEE640FF86C42E62 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17083C894B4242C4AD10962C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		5145DB7A1897392F007B97E6 /* Populate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Populate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5145DB7D1897392F007B97E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5145DB7F1897392F007B97E6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +144,9 @@
 		5145DC36189775DC007B97E6 /* NSCharacterSet_NSSetTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCharacterSet_NSSetTest.m; sourceTree = "<group>"; };
 		5145DC37189775DC007B97E6 /* NSString_RandomTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_RandomTests.m; sourceTree = "<group>"; };
 		51DE649C1897992200CA6E79 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		51DE64E51897A57600CA6E79 /* ACIdenticonImageSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACIdenticonImageSet.h; sourceTree = "<group>"; };
+		51DE64E61897A57600CA6E79 /* ACIdenticonImageSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACIdenticonImageSet.m; sourceTree = "<group>"; };
+		81A7F917AEE640FF86C42E62 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +178,7 @@
 			files = (
 				51DE649D1897992200CA6E79 /* AddressBook.framework in Frameworks */,
 				5145DBB718973A74007B97E6 /* Foundation.framework in Frameworks */,
+				BEDF3723686F4758B8047FD3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +205,7 @@
 				5145DBCA18973A74007B97E6 /* PopulateKitTests */,
 				5145DB7C1897392F007B97E6 /* Frameworks */,
 				5145DB7B1897392F007B97E6 /* Products */,
+				17083C894B4242C4AD10962C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +228,7 @@
 				5145DB7F1897392F007B97E6 /* CoreGraphics.framework */,
 				5145DB811897392F007B97E6 /* UIKit.framework */,
 				5145DB9C1897392F007B97E6 /* XCTest.framework */,
+				81A7F917AEE640FF86C42E62 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -338,6 +347,8 @@
 				5145DBFB1897732D007B97E6 /* ACRandomColorImageSet.m */,
 				5145DBFC1897732D007B97E6 /* UIImage+Random.h */,
 				5145DBFD1897732D007B97E6 /* UIImage+Random.m */,
+				51DE64E51897A57600CA6E79 /* ACIdenticonImageSet.h */,
+				51DE64E61897A57600CA6E79 /* ACIdenticonImageSet.m */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -448,9 +459,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5145DBD218973A74007B97E6 /* Build configuration list for PBXNativeTarget "PopulateKit" */;
 			buildPhases = (
+				47858D37E307481BABF618AF /* Check Pods Manifest.lock */,
 				5145DBB218973A74007B97E6 /* Sources */,
 				5145DBB318973A74007B97E6 /* Frameworks */,
 				5145DBB418973A74007B97E6 /* CopyFiles */,
+				96D0F4A7EB464050986EF56C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -548,6 +561,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		47858D37E307481BABF618AF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96D0F4A7EB464050986EF56C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5145DB761897392F007B97E6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -583,6 +629,7 @@
 				5145DC1D1897732D007B97E6 /* NSString+Randomized.m in Sources */,
 				5145DC1B1897732D007B97E6 /* NSCharacterSet+NSSet.m in Sources */,
 				5145DBED189753F2007B97E6 /* ACAddressBook.m in Sources */,
+				51DE64E71897A57600CA6E79 /* ACIdenticonImageSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +844,7 @@
 		};
 		5145DBD318973A74007B97E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17083C894B4242C4AD10962C /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/PopulateKit.dst;
@@ -815,6 +863,7 @@
 		};
 		5145DBD418973A74007B97E6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17083C894B4242C4AD10962C /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				DSTROOT = /tmp/PopulateKit.dst;
@@ -968,6 +1017,7 @@
 				51DE649A189792B100CA6E79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.author   = { 'Arnaud Coomans' => 'arnaud.coomans@gmail.com' }
   s.source   = { :git => 'https://github.com/acoomans/Populate.git', :tag => '0.0.1' }
   s.source_files = 'PopulateKit/**/*.{h,m}'
+  s.dependency 'IGIdenticon', '~> 0.1'
   s.frameworks = 'UIKit', 'AddressBook'
   s.xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
   s.requires_arc = true

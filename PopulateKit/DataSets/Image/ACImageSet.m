@@ -8,6 +8,7 @@
 
 #import "ACImageSet.h"
 #import "ACRandomColorImageSet.h"
+#import "ACIdenticonImageSet.h"
 
 @implementation ACImageSet
 
@@ -16,6 +17,15 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _set = [[ACRandomColorImageSet alloc] init];
+    });
+    return _set;
+}
+
++ (instancetype)identiconImageSet {
+    static ACIdenticonImageSet *_set = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _set = [[ACIdenticonImageSet alloc] init];
     });
     return _set;
 }
