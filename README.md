@@ -6,9 +6,9 @@ Populate is both an iOS app and library to easily create random-generated contac
 - the PopulateKit library let you create contacts for either adding to the address book or any other purpose.
 
 
-[![Build Status](https://api.travis-ci.org/acoomans/Populate.png)](https://api.travis-ci.org/acoomans/Populate.png)
-[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/Populate/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3APopulate%2A)
-[![Cocoapods](https://cocoapod-badges.herokuapp.com/p/Populate/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3APopulate%2A)
+[![Build Status](https://api.travis-ci.org/acoomans/PopulateKit.png)](https://api.travis-ci.org/acoomans/PopulateKit.png)
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/v/PopulateKit/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3APopulateKit%2A)
+[![Cocoapods](https://cocoapod-badges.herokuapp.com/p/PopulateKit/badge.png)](http://beta.cocoapods.org/?q=on%3Aios%20name%3APopulateKit%2A)
 
 
 ## Screenshots
