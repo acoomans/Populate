@@ -23,7 +23,7 @@ Populate is both an iOS app and library to easily create random-generated contac
 ### Run the app
 
 1. Install the [pods](http://cocoapods.org) with `pod install`
-2. Build _Populate.xcworkspace_ (the workspace, not the project) and run it
+2. Open _Populate.xcworkspace_ (the **workspace**, not the project), build it and run it
 3. Choose a group name (useful for later deletion), number of contacts, type of name and type of photo
 5. Tap _populate_ to add the contacts
 6. Tap _depopulate_ to remove the group and all its member contacts
@@ -36,9 +36,7 @@ You can tap _contacts_ to open the address book without switching apps.
 
 ## PopulateKit library
 
-### Install
-
-You can either clone this repository and add the files in the _PopulateKit_ directory to your project; or use [CocoaPods](http://cocoapods.org).
+### Install with [CocoaPods](http://cocoapods.org)
 
 Add a pod entry to your Podfile:
 
@@ -47,7 +45,15 @@ Add a pod entry to your Podfile:
 Install the pod(s) by running:
 
     pod install
+    
+### Install manually
 
+1. clone this repository
+2. add the files in the _PopulateKit_ directory to your project
+3. link your app with the _AddressBook_ framework
+4. set `OTHER_LINKER_FLAGS="-ObjC" for your target
+
+If you want the (optional) identicons, you should also add [IGIdenticon](https://github.com/Seaburg/IGIdenticon) to your project.
 
 ### Usage
 
