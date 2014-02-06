@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Arnaud Coomans. All rights reserved.
 //
 
+#ifdef IGIDENTICON_AVAILABLE
+
 #import "ACIdenticonImageSet.h"
-
 #import <IGIdenticon.h>
-
 
 @implementation ACIdenticonImageSet
 
@@ -22,3 +22,5 @@
 }
 
 @end
+
+#endif

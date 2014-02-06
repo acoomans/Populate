@@ -8,6 +8,14 @@
 
 #import "ACImageSet.h"
 
+#if defined(__has_include)
+#if __has_include("IGIdenticon.h") && __has_include(<IGIdenticon.h>)
+#define IGIDENTICON_AVAILABLE 1
+#endif
+#endif
+
+
+#ifdef IGIDENTICON_AVAILABLE
 
 /** ACIdenticonImageSet is a set of [identicon](https://en.wikipedia.org/wiki/Identicon) images.
  */
@@ -24,3 +32,5 @@
 - (NSInteger)count;
 
 @end
+
+#endif

@@ -20,9 +20,11 @@
  */
 + (instancetype)randomColorImageSet;
 
+#ifdef IGIDENTICON_AVAILABLE
 /** A set of identicon.
  */
 + (instancetype)identiconImageSet;
+#endif
 
 /** A set of male faces.
  */

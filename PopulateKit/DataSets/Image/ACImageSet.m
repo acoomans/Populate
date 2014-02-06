@@ -8,7 +8,9 @@
 
 #import "ACImageSet.h"
 #import "ACRandomColorImageSet.h"
+#ifdef IGIDENTICON_AVAILABLE
 #import "ACIdenticonImageSet.h"
+#endif
 #import "ACMaleFaceImageSet.h"
 #import "ACFemaleFaceImageSet.h"
 
@@ -23,6 +25,7 @@
     return _set;
 }
 
+#ifdef IGIDENTICON_AVAILABLE
 + (instancetype)identiconImageSet {
     static ACIdenticonImageSet *_set = nil;
     static dispatch_once_t onceToken;
@@ -31,6 +34,7 @@
     });
     return _set;
 }
+#endif
 
 + (instancetype)maleFaceImageSet {
     static ACMaleFaceImageSet *_set = nil;
