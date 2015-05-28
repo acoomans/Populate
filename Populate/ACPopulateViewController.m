@@ -127,6 +127,17 @@ NS_ENUM(NSInteger, ACPopulateViewControllerImageType) {
     [self presentViewController:peoplePickerNavigationController animated:YES completion:nil];
 }
 
+- (IBAction)deleteAllContactsButtonAction:(id)sender {
+
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"This will delete all contacts in the address book. Are you sure you want to continue?"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:@"Delete all contacts"
+                                                    otherButtonTitles:nil];
+
+    [actionSheet showInView:self.view];
+}
+
 
 #pragma mark - UIAlertViewDelegate
 
@@ -149,6 +160,32 @@ NS_ENUM(NSInteger, ACPopulateViewControllerImageType) {
             break;
     }
 }
+
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)actionSheet:(UIActionSheet *)popup clickedButtonAtIndex:(NSInteger)buttonIndex {
+
+    if (buttonIndex == 0) {
+        CFErrorRef error = NULL;
+
+        ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, &error);
+
+        ABAddressBookRequestAccessWithCompletion(addressBookRef, ^(bool granted, CFErrorRef error) {
+            CFArrayRef allPeopleRef = ABAddressBookCopyArrayOfAllPeople(addressBookRef);
+
+            for (CFIndex i = 0; i < CFArrayGetCount(allPeopleRef); i++) {
+                ABRecordRef personRef = CFArrayGetValueAtIndex(allPeopleRef, i);
+                ABAddressBookRemoveRecord(addressBookRef, personRef, &error);
+            }
+
+            ABAddressBookSave(addressBookRef, &error);
+            CFRelease(allPeopleRef);
+            CFRelease(addressBookRef);
+        });
+    }
+}
+
 
 #pragma mark - ABPeoplePickerNavigationControllerDelegate
 

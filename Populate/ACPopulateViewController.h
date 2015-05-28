@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AddressBookUI/AddressBookUI.h>
 
-@interface ACPopulateViewController : UIViewController <UIAlertViewDelegate, ABPeoplePickerNavigationControllerDelegate, UITextFieldDelegate>
+@interface ACPopulateViewController : UIViewController <UIActionSheetDelegate, UIAlertViewDelegate, ABPeoplePickerNavigationControllerDelegate, UITextFieldDelegate>
 
 @property (nonatomic, weak) IBOutlet UITextField *groupNameTextField;
 
