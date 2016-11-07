@@ -1,2 +1,3 @@
-link_with 'PopulateKit'
-pod 'IGIdenticon', '~> 0.1'
+target "Populate" do
+	pod 'IGIdenticon', '~> 0.1'
+end

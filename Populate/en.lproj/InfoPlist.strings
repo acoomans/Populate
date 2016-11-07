@@ -1,2 +1,5 @@
 /* Localized versions of Info.plist keys */
 
+/* (No Commment) */
+"NSContactsUsageDescription" = "Please allow access to contacts so that Populate app can populate Address Book with new contacts";
+

@@ -81,7 +81,7 @@ NS_ENUM(NSInteger, ACPopulateViewControllerImageType) {
             
         case ACPopulateViewControllerImageTypeIdenticon:
         default:
-            maleImageSet = femaleImageSet = [ACImageSet identiconImageSet];
+            maleImageSet = [ACImageSet maleFaceImageSet];
             break;
     }
     
